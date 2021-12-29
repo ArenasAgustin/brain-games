@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.scss';
+import Level1 from './components/Level1/Level1';
 
 function App() {
   return (
-    <div className="App">
-      
+    <div className="">
+      <Level1 />
     </div>
   );
 }
