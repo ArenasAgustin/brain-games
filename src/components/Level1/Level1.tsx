@@ -1,4 +1,5 @@
 import React from "react";
+import Input from "../Input/Input";
 import "./Level1.scss";
 
 export default function Level1() {
@@ -114,9 +115,11 @@ export default function Level1() {
       <div className="level1__guess-container">
         <span className="level1__guess">
           6 &nbsp; 8 &nbsp; 36 &nbsp; 4 &nbsp; 16 &nbsp; 10 &nbsp; 34 &nbsp; 0
-          &nbsp; 6 &nbsp; 0
+          &nbsp; 34
         </span>
       </div>
+
+      <Input solution="descifrar" level={1} />
     </div>
   );
 }
