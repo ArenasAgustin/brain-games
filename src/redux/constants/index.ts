@@ -1,0 +1,3 @@
+export const GET_LEVELSARR = 'GET_LEVELSARR';
+
+export const SET_LEVELSARR = 'SET_LEVELSARR';

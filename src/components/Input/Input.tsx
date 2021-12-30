@@ -1,13 +1,19 @@
-import React, { ChangeEvent, FormEvent, useState } from "react";
+import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { IoChevronForwardSharp } from "react-icons/io5";
 import { GiPadlock, GiPadlockOpen } from "react-icons/gi";
 import InputInterface from "../../interfaces/inputInterface";
 import validator from "../../utils/validator";
 import "./Input.scss";
+import StateInterface from "../../interfaces/stateInterface";
 
 export default function Input({ solution, level }: InputInterface) {
+  // const dispatch = useDispatch();
+  const levelsArr = useSelector((state: StateInterface) => state.levelsArr);
+
   const [value, setValue] = useState("");
   const [isValid, setIsValid] = useState(false);
+  const [auxLevelsArr, setAuxLevelsArr] = useState(levelsArr)
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
     setValue(e.target.value);
@@ -18,11 +24,18 @@ export default function Input({ solution, level }: InputInterface) {
     setIsValid(validator(value, solution));
 
     if (isValid) {
+      let newLevelsArr = [...auxLevelsArr];
+      newLevelsArr[level - 1] = isValid;
+      setAuxLevelsArr(newLevelsArr);
       alert("Correct!");
     } else {
       alert("Incorrect!");
     }
   };
+
+  useEffect(() => {
+    setAuxLevelsArr(levelsArr);
+  }, [levelsArr]);
 
   return (
     <form
