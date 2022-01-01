@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Level1 from "./pages/Level1/Level1Page";
-import Level2 from "./components/Level2/Level2";
+import Level2 from "./pages/Level2/Level2Page";
 import SelectLevel from "./pages/SelectLevel/SelectLevel";
 import Home from "./pages/Home/Home";
 import "./App.scss";

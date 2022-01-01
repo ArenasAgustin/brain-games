@@ -21,7 +21,7 @@ export default function Input({ solution, level }: InputInterface) {
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
     setStateLocal({
       ...stateLocal,
-      value: e.target.value,
+      value: e.target.value.toLowerCase(),
     });
   };
 
