@@ -1,32 +1,45 @@
 import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useAppSelector, useAppDispatch } from "../../redux/hooks/hooks";
 import { IoChevronForwardSharp } from "react-icons/io5";
 import { GiPadlock, GiPadlockOpen } from "react-icons/gi";
 import InputInterface from "../../interfaces/inputInterface";
 import validator from "../../utils/validator";
-import "./Input.scss";
 import StateInterface from "../../interfaces/stateInterface";
+import { setLevelsArr } from "../../redux/actions";
+import "./Input.scss";
 
 export default function Input({ solution, level }: InputInterface) {
-  // const dispatch = useDispatch();
-  const levelsArr = useSelector((state: StateInterface) => state.levelsArr);
+  const levelsArr = useAppSelector((state: StateInterface) => state.levelsArr);
+  const dispatch = useAppDispatch();
 
-  const [value, setValue] = useState("");
-  const [isValid, setIsValid] = useState(false);
-  const [auxLevelsArr, setAuxLevelsArr] = useState(levelsArr)
+  const [stateLocal, setStateLocal] = useState({
+    value: "",
+    isValid: false,
+    auxLevelsArr: levelsArr,
+  });
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
-    setValue(e.target.value);
+    setStateLocal({
+      ...stateLocal,
+      value: e.target.value,
+    });
   };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    setIsValid(validator(value, solution));
+    let isValidAux = validator(stateLocal.value, solution);
 
-    if (isValid) {
-      let newLevelsArr = [...auxLevelsArr];
-      newLevelsArr[level - 1] = isValid;
-      setAuxLevelsArr(newLevelsArr);
+    if (isValidAux) {
+      let newLevelsArr = [...stateLocal.auxLevelsArr];
+      newLevelsArr[level - 1] = isValidAux;
+
+      setStateLocal({
+        ...stateLocal,
+        auxLevelsArr: newLevelsArr,
+        isValid: isValidAux,
+      });
+
+      dispatch(setLevelsArr(newLevelsArr));
       alert("Correct!");
     } else {
       alert("Incorrect!");
@@ -34,7 +47,10 @@ export default function Input({ solution, level }: InputInterface) {
   };
 
   useEffect(() => {
-    setAuxLevelsArr(levelsArr);
+    setStateLocal({
+      ...stateLocal,
+      auxLevelsArr: levelsArr,
+    });
   }, [levelsArr]);
 
   return (
@@ -44,14 +60,14 @@ export default function Input({ solution, level }: InputInterface) {
     >
       <div className="input__paddock">
         <div className="input__paddock-icon">
-          {isValid ? <GiPadlockOpen /> : <GiPadlock />}
+          {true ? <GiPadlockOpen /> : <GiPadlock />}
         </div>
       </div>
       <input
         className="input__input"
         type="text"
         onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
-        value={value}
+        value={stateLocal.value}
         placeholder="Escribir la respuesta"
       />
       <button className="input__button">
