@@ -1,5 +1,4 @@
 import React from "react";
-import Input from "../Input/Input";
 import "./Level1.scss";
 
 export default function Level1() {
@@ -118,8 +117,6 @@ export default function Level1() {
           &nbsp; 34
         </span>
       </div>
-
-      <Input solution="descifrar" level={1} />
     </div>
   );
 }

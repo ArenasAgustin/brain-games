@@ -1,0 +1,13 @@
+.button-level{
+    margin: .5rem;
+
+    .button-level__button{
+        width: 100%;
+        height: 100%;
+
+        .button-level__text{
+            font-size: 22px;
+            margin: .5rem;
+        }
+    }
+}

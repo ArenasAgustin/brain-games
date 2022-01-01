@@ -1,13 +1,20 @@
 import React from "react";
-import "./App.scss";
-import Level1 from "./components/Level1/Level1";
 import { Route, Routes } from "react-router-dom";
+import Level1 from "./pages/Level1/Level1Page";
 import Level2 from "./components/Level2/Level2";
+import SelectLevel from "./pages/SelectLevel/SelectLevel";
+import Home from "./pages/Home/Home";
+import "./App.scss";
+
 
 function App() {
   return (
     <div className="">
       <Routes>
+        <Route path="/" element={<Home />} />
+
+        <Route path="/select" element={<SelectLevel />} />
+
         <Route path="/level1" element={<Level1 />} />
 
         <Route path="/level2" element={<Level2 />} />
