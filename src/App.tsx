@@ -15,9 +15,9 @@ function App() {
 
         <Route path="/select" element={<SelectLevel />} />
 
-        <Route path="/level1" element={<Level1 />} />
+        <Route path="/select/level1" element={<Level1 />} />
 
-        <Route path="/level2" element={<Level2 />} />
+        <Route path="/select/level2" element={<Level2 />} />
       </Routes>
     </div>
   );

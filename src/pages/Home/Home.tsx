@@ -7,7 +7,7 @@ export default function Home() {
     <div className="home">
       <div className="button-home">
         <NavLink className="button-home__button" to={`select`}>
-          <p className="button-home__text">Select Level</p>
+          <p className="button-home__text">Elegir nivel</p>
         </NavLink>
       </div>
     </div>
