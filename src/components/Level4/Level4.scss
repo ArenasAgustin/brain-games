@@ -26,7 +26,7 @@
             & .level4__clue {
                 border: #ffffff solid 1px;
                 width: 2rem;
-                padding: 1px 5px;
+                padding: 1px .4em;
             }
         }
     }
@@ -38,7 +38,10 @@
         font-weight: bold;
 
         & .level4__guess {
-            
+            & img {
+                width: 2rem;
+                padding: 0 .2em;
+            }
         }
     }
 }
