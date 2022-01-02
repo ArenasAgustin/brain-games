@@ -5,6 +5,7 @@ import SelectLevel from "./pages/SelectLevel/SelectLevel";
 import Level1 from "./pages/Level1/Level1Page";
 import Level2 from "./pages/Level2/Level2Page";
 import Level3 from "./pages/Level3/Level3Page";
+import Level4 from "./pages/Level4/Level4Page";
 import "./App.scss";
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
         <Route path="/select/level2" element={<Level2 />} />
 
         <Route path="/select/level3" element={<Level3 />} />
+
+        <Route path="/select/level4" element={<Level4 />} />
       </Routes>
     </div>
   );

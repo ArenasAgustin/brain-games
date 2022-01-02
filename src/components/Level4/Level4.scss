@@ -1,0 +1,44 @@
+.level4__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & .level4__puzzle {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: .5em;
+
+        & .level4__file {
+            font-size: 20px;
+            margin-top: .5em;
+
+            & .level4__letter {
+                margin-bottom: 1px;
+            }
+
+            & .level4__clue {
+                border: #ffffff solid 1px;
+                width: 2rem;
+                padding: 1px 5px;
+            }
+        }
+    }
+
+    & .level4__guess-container{
+        margin: 1em 0;
+        width: 100%;
+        font-size: 24px;
+        font-weight: bold;
+
+        & .level4__guess {
+            
+        }
+    }
+}
