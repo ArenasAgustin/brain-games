@@ -145,7 +145,7 @@ export default function Level1() {
           <p className="level4__letter">R</p>
           <img
             className="level4__clue"
-            alt="Emoji "
+            alt="Emoji sad but relieved face"
             src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/314/sad-but-relieved-face_1f625.png"
           />
         </div>
@@ -153,7 +153,7 @@ export default function Level1() {
           <p className="level4__letter">S</p>
           <img
             className="level4__clue"
-            alt="Emoji "
+            alt="Emoji crying face"
             src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/314/crying-face_1f622.png"
           />
         </div>
@@ -161,7 +161,7 @@ export default function Level1() {
           <p className="level4__letter">T</p>
           <img
             className="level4__clue"
-            alt="Emoji "
+            alt="Emoji weary face"
             src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/314/weary-face_1f629.png"
           />
         </div>
@@ -169,7 +169,7 @@ export default function Level1() {
           <p className="level4__letter">U</p>
           <img
             className="level4__clue"
-            alt="Emoji "
+            alt="Emoji tired face"
             src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/314/tired-face_1f62b.png"
           />
         </div>
@@ -177,7 +177,7 @@ export default function Level1() {
           <p className="level4__letter">V</p>
           <img
             className="level4__clue"
-            alt="Emoji "
+            alt="Emoji pouting face"
             src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/314/pouting-face_1f621.png"
           />
         </div>
@@ -185,7 +185,7 @@ export default function Level1() {
           <p className="level4__letter">W</p>
           <img
             className="level4__clue"
-            alt="Emoji "
+            alt="Emoji angry face"
             src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/314/angry-face_1f620.png"
           />
         </div>
@@ -193,7 +193,7 @@ export default function Level1() {
           <p className="level4__letter">X</p>
           <img
             className="level4__clue"
-            alt="Emoji "
+            alt="Emoji neutral face"
             src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/314/neutral-face_1f610.png"
           />
         </div>
@@ -201,7 +201,7 @@ export default function Level1() {
           <p className="level4__letter">Y</p>
           <img
             className="level4__clue"
-            alt="Emoji "
+            alt="Emoji face with medical mask"
             src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/314/face-with-medical-mask_1f637.png"
           />
         </div>
@@ -209,7 +209,7 @@ export default function Level1() {
           <p className="level4__letter">Z</p>
           <img
             className="level4__clue"
-            alt="Emoji "
+            alt="Emoji expressionless face"
             src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/314/expressionless-face_1f611.png"
           />
         </div>
