@@ -218,43 +218,43 @@ export default function Level1() {
       <div className="level4__guess-container">
         <span className="level4__guess">
           <img
-            alt="Emoji "
+            alt="Emoji relieved face"
             src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/314/relieved-face_1f60c.png"
           />
           <img
-            alt="Emoji "
+            alt="Emoji grinning face with smiling eyes"
             src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/314/grinning-face-with-smiling-eyes_1f604.png"
           />
           <img
-            alt="Emoji "
+            alt="Emoji beaming face with smiling eyes"
             src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/314/beaming-face-with-smiling-eyes_1f601.png"
           />
           <img
-            alt="Emoji "
+            alt="Emoji hushed face"
             src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/314/hushed-face_1f62f.png"
           />
           <img
-            alt="Emoji "
+            alt="Emoji grinning face with sweat"
             src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/314/grinning-face-with-sweat_1f605.png"
           />
           <img
-            alt="Emoji "
+            alt="Emoji sad but relieved face"
             src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/314/sad-but-relieved-face_1f625.png"
           />
           <img
-            alt="Emoji "
+            alt="Emoji smiling face with smiling eyes"
             src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/314/smiling-face-with-smiling-eyes_1f60a.png"
           />
           <img
-            alt="Emoji "
+            alt="Emoji confused face"
             src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/314/confused-face_1f615.png"
           />
           <img
-            alt="Emoji "
+            alt="Emoji smiling face with smiling eyes"
             src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/314/smiling-face-with-smiling-eyes_1f60a.png"
           />
           <img
-            alt="Emoji "
+            alt="Emoji crying face"
             src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/314/crying-face_1f622.png"
           />
         </span>
