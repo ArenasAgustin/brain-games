@@ -86,7 +86,11 @@ export default function Level6() {
       </div>
 
       <div className="level6__guess-container">
-        <span className="level6__guess">{"E -> 9 + <- 5 + <- 2 + -> 6 + <- 12"}</span>
+        <span className="level6__guess">
+          E &nbsp; {"->"} 9 &nbsp; + &nbsp; {"<-"} &nbsp; 5 &nbsp; + &nbsp;
+          {"<-"} &nbsp; 2 &nbsp; + &nbsp; {"->"} &nbsp; 6 &nbsp; + &nbsp; {"<-"}
+          &nbsp; 12
+        </span>
       </div>
     </div>
   );

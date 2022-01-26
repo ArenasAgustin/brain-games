@@ -5,17 +5,17 @@ import "./NavBar.scss";
 export default function NavBar() {
   return (
     <div className="nav__container">
-      <div className="nav__div-button">
-        <NavLink className="nav__button" to="/">
+      <NavLink className="nav__button" to="/">
+        <div className="nav__div-button">
           <p className="nav__button-text">Menu</p>
-        </NavLink>
-      </div>
+        </div>
+      </NavLink>
 
-      <div className="nav__div-button">
-        <NavLink className="nav__button" to="/select">
+      <NavLink className="nav__button" to="/select">
+        <div className="nav__div-button">
           <p className="nav__button-text">Niveles</p>
-        </NavLink>
-      </div>
+        </div>
+      </NavLink>
     </div>
   );
 }

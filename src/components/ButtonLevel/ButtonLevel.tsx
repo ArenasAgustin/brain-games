@@ -8,10 +8,10 @@ export default function ButtonLevel({
   isCompleted,
 }: LevelButtonInterface) {
   return (
-    <div className={`button-level ${isCompleted ? "completed" : ""}`}>
-      <NavLink className="button-level__button" to={`level${level}`}>
+    <NavLink className="button-level__button" to={`level${level}`}>
+      <div className={`button-level ${isCompleted ? "completed" : ""}`}>
         <p className="button-level__text">Nivel {level}</p>
-      </NavLink>
-    </div>
+      </div>
+    </NavLink>
   );
 }

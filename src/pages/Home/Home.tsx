@@ -12,11 +12,11 @@ export default function Home() {
         </h1>
       </div>
 
-      <div className="home__button-container">
-        <NavLink className="home__button" to={`select`}>
+      <NavLink className="home__button" to="select">
+        <div className="home__button-container">
           <p className="home__button-text">Elegir nivel</p>
-        </NavLink>
-      </div>
+        </div>
+      </NavLink>
     </div>
   );
 }

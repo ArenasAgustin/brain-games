@@ -1,12 +1,10 @@
-.button-level {
-    margin: .5rem;
-    width: 6em;
-    border: #ffffff solid 3px;
+.button-level__button {
+    text-decoration: none;
 
-    & .button-level__button {
-        width: 100%;
-        height: 100%;
-        text-decoration: none;
+    & .button-level {
+        margin: .5rem;
+        width: 6em;
+        border: #ffffff solid 3px;
 
         & .button-level__text {
             font-size: 20px;
