@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
 
-    .level8__puzzle {
+    & .level8__puzzle {
         width: calc(100% - 2em);
         display: flex;
         flex-direction: row;
@@ -15,15 +15,15 @@
         flex-wrap: wrap;
         padding: .8em 1em;
 
-        .level8__file {
+        & .level8__file {
             font-size: 20px;
             margin-top: .5em;
 
-            .level8__letter {
+            & .level8__letter {
                 margin-bottom: 1px;
             }
 
-            .level8__clue {
+            & .level8__clue {
                 border: #ffffff solid 1px;
                 width: 3.2em;
                 height: 1.5em;
@@ -31,13 +31,13 @@
         }
     }
 
-    .level8__guess-container {
+    & .level8__guess-container {
         margin: 1em 0;
         width: 100%;
         font-size: 24px;
         font-weight: bold;
 
-        .level8__guess {
+        & .level8__guess {
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -51,75 +51,75 @@
         }
     }
 
-    .yellow {
+    & .yellow {
         background-color: #ffff00;
     }
 
-    .red {
+    & .red {
         background-color: #f54237;
     }
 
-    .green {
+    & .green {
         background-color: #00ff01;
     }
 
-    .brown {
+    & .brown {
         background-color: #954c00;
     }
 
-    .grey {
+    & .grey {
         background-color: #d3d3d3;
     }
 
-    .violet {
+    & .violet {
         background-color: #9647cf;
     }
 
-    .beige {
+    & .beige {
         background-color: #d2b48a;
     }
 
-    .pink {
+    & .pink {
         background-color: #ffbecc;
     }
 
-    .orange {
+    & .orange {
         background-color: #fea500;
     }
 
-    .white {
+    & .white {
         background-color: #ffffff;
     }
 
-    .black {
+    & .black {
         background-color: #000000;
     }
 
-    .blue {
+    & .blue {
         background-color: #0000fe;
     }
 
-    .light-blue {
+    & .light-blue {
         background-color: #00bfff;
     }
 
-    .burgundy {
+    & .burgundy {
         background-color: #800020;
     }
 
-    .dark-gray {
+    & .dark-gray {
         background-color: #333333;
     }
 
-    .dark-blue {
+    & .dark-blue {
         background-color: #000063;
     }
 
-    .dark-green {
+    & .dark-green {
         background-color: #003300;
     }
 
-    .gold {
+    & .gold {
         background-color: #ffd000;
     }
 }
