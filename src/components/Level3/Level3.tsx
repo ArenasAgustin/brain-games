@@ -1,7 +1,7 @@
 import React from "react";
 import "./Level3.scss";
 
-export default function Level1() {
+export default function Level3() {
   return (
     <div className="level3__container">
       <div className="level3__puzzle">
