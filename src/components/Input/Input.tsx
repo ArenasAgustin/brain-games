@@ -59,8 +59,16 @@ export default function Input({ solution, level }: InputInterface) {
       onSubmit={(event: FormEvent<HTMLFormElement>) => handleSubmit(event)}
     >
       <div className="input__paddock">
-        <div className="input__paddock-icon">
-          {true ? <GiPadlockOpen /> : <GiPadlock />}
+        <div
+          className={`input__paddock-icon ${
+            stateLocal.auxLevelsArr[level - 1] ? "completed" : ""
+          }`}
+        >
+          {stateLocal.auxLevelsArr[level - 1] ? (
+            <GiPadlockOpen />
+          ) : (
+            <GiPadlock />
+          )}
         </div>
       </div>
       <input
