@@ -15,7 +15,7 @@ export default function Level10Page() {
       </div>
 
       <div>
-        <Input solution="ascii" level={10} />
+        <Input solution="polybius" level={10} />
       </div>
     </div>
   );
