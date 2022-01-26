@@ -112,7 +112,7 @@ export default function Level5() {
       </div>
 
       <div className="level5__guess-container">
-        <span className="level5__guess">HQFULSWDU</span>
+        <span className="level5__guess">BLOQUEADO</span>
       </div>
     </div>
   );

@@ -16,7 +16,7 @@ export default function Level5Page() {
       </div>
 
       <div>
-        <Input solution="completado" level={5} />
+        <Input solution="3322136435712447611171364" level={5} />
       </div>
     </div>
   );
