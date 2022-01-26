@@ -26,6 +26,8 @@ function App() {
         <Route path="/select/level4" element={<Level4 />} />
 
         <Route path="/select/level5" element={<Level5 />} />
+
+        <Route path="*" element={<Home />} />
       </Routes>
     </div>
   );
