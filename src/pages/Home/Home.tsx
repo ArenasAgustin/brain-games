@@ -4,10 +4,10 @@ import './Home.scss';
 
 export default function Home() {
   return (
-    <div className="home">
-      <div className="button-home">
-        <NavLink className="button-home__button" to={`select`}>
-          <p className="button-home__text">Elegir nivel</p>
+    <div className="home__container">
+      <div className="home__button-container">
+        <NavLink className="home__button" to={`select`}>
+          <p className="home__button-text">Elegir nivel</p>
         </NavLink>
       </div>
     </div>

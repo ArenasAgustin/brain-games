@@ -15,16 +15,18 @@ export default function SelectLevel() {
   }, [levelsArr]);
 
   return (
-    <div>
-      <div className="div-button">
-        <NavLink className="button" to="/">
-          <p className="button-text">Menu</p>
-        </NavLink>
-      </div>
+    <div className="select-level__container">
+      <nav className="select-level__nav">
+        <div className="select-level__div-button">
+          <NavLink className="select-level__button" to="/">
+            <p className="select-level__button-text">Menu</p>
+          </NavLink>
+        </div>
+      </nav>
 
-      <div className="select-level">
+      <div className="select-level__levels">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((level, index) => (
-          <ButtonLevel level={level} key={level} isCompleted={levels[index]}/>
+          <ButtonLevel level={level} key={level} isCompleted={levels[index]} />
         ))}
       </div>
     </div>
