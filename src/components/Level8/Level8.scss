@@ -1,0 +1,125 @@
+.level8__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .level8__puzzle {
+        width: calc(100% - 2em);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: .8em 1em;
+
+        .level8__file {
+            font-size: 20px;
+            margin-top: .5em;
+
+            .level8__letter {
+                margin-bottom: 1px;
+            }
+
+            .level8__clue {
+                border: #ffffff solid 1px;
+                width: 3.2em;
+                height: 1.5em;
+            }
+        }
+    }
+
+    .level8__guess-container {
+        margin: 1em 0;
+        width: 100%;
+        font-size: 24px;
+        font-weight: bold;
+
+        .level8__guess {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            & div {
+                width: 3.2em;
+                height: 1.5em;
+                margin: 0 .35em;
+            }
+        }
+    }
+
+    .yellow {
+        background-color: #ffff00;
+    }
+
+    .red {
+        background-color: #f54237;
+    }
+
+    .green {
+        background-color: #00ff01;
+    }
+
+    .brown {
+        background-color: #954c00;
+    }
+
+    .grey {
+        background-color: #d3d3d3;
+    }
+
+    .violet {
+        background-color: #9647cf;
+    }
+
+    .beige {
+        background-color: #d2b48a;
+    }
+
+    .pink {
+        background-color: #ffbecc;
+    }
+
+    .orange {
+        background-color: #fea500;
+    }
+
+    .white {
+        background-color: #ffffff;
+    }
+
+    .black {
+        background-color: #000000;
+    }
+
+    .blue {
+        background-color: #0000fe;
+    }
+
+    .light-blue {
+        background-color: #00bfff;
+    }
+
+    .burgundy {
+        background-color: #800020;
+    }
+
+    .dark-gray {
+        background-color: #333333;
+    }
+
+    .dark-blue {
+        background-color: #000063;
+    }
+
+    .dark-green {
+        background-color: #003300;
+    }
+
+    .gold {
+        background-color: #ffd000;
+    }
+}
