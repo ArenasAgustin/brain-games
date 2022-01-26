@@ -17,11 +17,11 @@ export default function SelectLevel() {
   return (
     <div className="select-level__container">
       <nav className="select-level__nav">
-        <div className="select-level__div-button">
-          <NavLink className="select-level__button" to="/">
+        <NavLink className="select-level__button" to="/">
+          <div className="select-level__div-button">
             <p className="select-level__button-text">Menu</p>
-          </NavLink>
-        </div>
+          </div>
+        </NavLink>
       </nav>
 
       <div className="select-level__levels">
