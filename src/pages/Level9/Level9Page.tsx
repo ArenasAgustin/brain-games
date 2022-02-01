@@ -3,6 +3,7 @@ import Input from "../../components/Input/Input";
 import Level9 from "../../components/Level9/Level9";
 import NavBar from "../../components/NavBar/NavBar";
 import TipPopup from "../../components/TipPopup/TipPopup";
+import data from "../../data/data.json";
 
 export default function Level9Page() {
   const [isOpen, setShowClue] = useState(false);
@@ -10,6 +11,8 @@ export default function Level9Page() {
   const toggleOpenClue = () => {
     setShowClue((prev) => !prev);
   };
+  
+  const objData = JSON.parse(JSON.stringify(data));
 
   return (
     <div>
@@ -22,11 +25,11 @@ export default function Level9Page() {
       </div>
 
       <div>
-        <Input solution="ascii" level={9} />
+        <Input solution={objData.solutions.solution9} level={9} />
       </div>
 
       <div>
-        <TipPopup isOpen={isOpen} toggleOpenClue={toggleOpenClue} />
+        <TipPopup isOpen={isOpen} toggleOpenClue={toggleOpenClue} level={9}/>
       </div>
     </div>
   );

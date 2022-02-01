@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
+import data from "../../data/data.json";
 import "./TipPopup.scss";
 
 export default function CluePopup({
   isOpen,
   toggleOpenClue,
+  level,
 }: {
   isOpen: boolean;
   toggleOpenClue: () => void;
+  level: number;
 }) {
   const [showClue, setShowClue] = useState([false, false, false]);
 
@@ -20,6 +23,8 @@ export default function CluePopup({
 
     setShowClue(newShowClue);
   };
+
+  const objData = JSON.parse(JSON.stringify(data));
 
   return (
     <>
@@ -53,8 +58,7 @@ export default function CluePopup({
                 </p>
 
                 <p className={`tip__tip-clue ${showClue[0] ? "active" : ""}`}>
-                  Pista 1: Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit.
+                  {objData.tips[`level${level}`].tip1}
                 </p>
               </div>
 
@@ -71,8 +75,7 @@ export default function CluePopup({
                 </p>
 
                 <p className={`tip__tip-clue ${showClue[1] ? "active" : ""}`}>
-                  Pista 2: Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit.
+                  {objData.tips[`level${level}`].tip2}
                 </p>
               </div>
 
@@ -89,8 +92,7 @@ export default function CluePopup({
                 </p>
 
                 <p className={`tip__tip-clue ${showClue[2] ? "active" : ""}`}>
-                  Pista 3: Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit.
+                  {objData.tips[`level${level}`].tip3}
                 </p>
               </div>
             </div>

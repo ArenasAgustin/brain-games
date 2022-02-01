@@ -3,6 +3,7 @@ import Input from "../../components/Input/Input";
 import Level4 from "../../components/Level4/Level4";
 import NavBar from "../../components/NavBar/NavBar";
 import TipPopup from "../../components/TipPopup/TipPopup";
+import data from "../../data/data.json";
 
 export default function Level4Page() {
   const [isOpen, setShowClue] = useState(false);
@@ -10,6 +11,8 @@ export default function Level4Page() {
   const toggleOpenClue = () => {
     setShowClue((prev) => !prev);
   };
+  
+  const objData = JSON.parse(JSON.stringify(data));
 
   return (
     <div>
@@ -22,11 +25,11 @@ export default function Level4Page() {
       </div>
 
       <div>
-        <Input solution="ideogramas" level={4} />
+        <Input solution={objData.solutions.solution4} level={4} />
       </div>
 
       <div>
-        <TipPopup isOpen={isOpen} toggleOpenClue={toggleOpenClue} />
+        <TipPopup isOpen={isOpen} toggleOpenClue={toggleOpenClue} level={4}/>
       </div>
     </div>
   );

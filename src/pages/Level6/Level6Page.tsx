@@ -3,6 +3,7 @@ import Input from "../../components/Input/Input";
 import Level6 from "../../components/Level6/Level6";
 import NavBar from "../../components/NavBar/NavBar";
 import TipPopup from "../../components/TipPopup/TipPopup";
+import data from "../../data/data.json";
 
 export default function Level6Page() {
   const [isOpen, setShowClue] = useState(false);
@@ -10,6 +11,8 @@ export default function Level6Page() {
   const toggleOpenClue = () => {
     setShowClue((prev) => !prev);
   };
+  
+  const objData = JSON.parse(JSON.stringify(data));
 
   return (
     <div>
@@ -22,11 +25,11 @@ export default function Level6Page() {
       </div>
 
       <div>
-        <Input solution="enigma" level={6} />
+        <Input solution={objData.solutions.solution6} level={6} />
       </div>
 
       <div>
-        <TipPopup isOpen={isOpen} toggleOpenClue={toggleOpenClue} />
+        <TipPopup isOpen={isOpen} toggleOpenClue={toggleOpenClue} level={6}/>
       </div>
     </div>
   );

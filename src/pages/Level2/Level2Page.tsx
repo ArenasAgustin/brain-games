@@ -3,6 +3,7 @@ import Input from "../../components/Input/Input";
 import Level2 from "../../components/Level2/Level2";
 import NavBar from "../../components/NavBar/NavBar";
 import TipPopup from "../../components/TipPopup/TipPopup";
+import data from "../../data/data.json";
 
 export default function Level2Page() {
   const [isOpen, setShowClue] = useState(false);
@@ -10,6 +11,8 @@ export default function Level2Page() {
   const toggleOpenClue = () => {
     setShowClue((prev) => !prev);
   };
+  
+  const objData = JSON.parse(JSON.stringify(data));
 
   return (
     <div>
@@ -22,11 +25,11 @@ export default function Level2Page() {
       </div>
 
       <div>
-        <Input solution="encriptar" level={2} />
+        <Input solution={objData.solutions.solution2} level={2} />
       </div>
 
       <div>
-        <TipPopup isOpen={isOpen} toggleOpenClue={toggleOpenClue} />
+        <TipPopup isOpen={isOpen} toggleOpenClue={toggleOpenClue} level={2}/>
       </div>
     </div>
   );
