@@ -54,13 +54,13 @@
             "tip3": "arcoiris"
         },
         "level9":{
-            "tip1": "",
-            "tip2": "",
+            "tip1": "De acuerdo con el código BYTE, obtenga las letras",
+            "tip2": "Mira que numero tiene cada letra de la palabra BYTE, B=66, Y=89,  T=84, E=69.",
             "tip3": "ascii"
         },
         "level10":{
-            "tip1": "",
-            "tip2": "",
+            "tip1": "Cada dos números se representa una letra.",
+            "tip2": "Primero son las filas y luego las columnas.",
             "tip3": "polybius"
         }
     }
