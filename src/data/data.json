@@ -1,0 +1,22 @@
+{
+    "solutions": {
+        "solution1": "descifrar",
+        "solution2": "encriptar",
+        "solution3": "completado",
+        "solution4": "ideogramas",
+        "solution5": "3322136435712447611171364",
+        "solution6": "enigma",
+        "solution7": "juegos",
+        "solution8": "arcoiris",
+        "solution9": "ascii",
+        "solution10": "polybius"
+    },
+
+    "tips":{
+        "level1":{
+            "tip1": "descifrar el código reemplazando las letras",
+            "tip2": "reemplace cada letra del cifrado de acuerdo con la información de la tabla",
+            "tip3": "descifrar"
+        }
+    }
+}

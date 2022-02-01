@@ -22,7 +22,7 @@ export default function Level4Page() {
       </div>
 
       <div>
-        <Input solution="completado" level={4} />
+        <Input solution="ideogramas" level={4} />
       </div>
 
       <div>
