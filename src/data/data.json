@@ -14,9 +14,54 @@
 
     "tips":{
         "level1":{
-            "tip1": "descifrar el código reemplazando las letras",
-            "tip2": "reemplace cada letra del cifrado de acuerdo con la información de la tabla",
+            "tip1": "Descifrar el código reemplazando las letras.",
+            "tip2": "Reemplace cada letra del cifrado de acuerdo con la información de la tabla.",
             "tip3": "descifrar"
+        },
+        "level2":{
+            "tip1": "Descifrar el código reemplazando las letras.",
+            "tip2": "Reemplace cada letra del cifrado de acuerdo con la información de la tabla.",
+            "tip3": "encriptar"
+        },
+        "level3":{
+            "tip1": "Descifrar el código resolviendo las operaciones de suma y resta.",
+            "tip2": "Reemplaza el número que obtienes de las operaciones.",
+            "tip3": "completado"
+        },
+        "level4":{
+            "tip1": "Decodificar el emoji.",
+            "tip2": "Substituye el emoji por cada letra de la tabla.",
+            "tip3": "ideogramas"
+        },
+        "level5":{
+            "tip1": "Tienes que sumar para obtener los códigos que faltan.",
+            "tip2": "Sumar A y B para obtener C.",
+            "tip3": "3322136435712447611171364"
+        },
+        "level6":{
+            "tip1": "<- significa que moverse a la izquierda, y -> significa que moverse a la derecha.",
+            "tip2": "Comience desde E y muévase tantas veces como se indica.",
+            "tip3": "enigma"
+        },
+        "level7":{
+            "tip1": "Los primeros números son los códigos de las letras y el segundo es el código para descifrar.",
+            "tip2": "A=1, B=2, C=3 ...",
+            "tip3": "juegos"
+        },
+        "level8":{
+            "tip1": "Obtener la palabra reemplazando los colores con las letras.",
+            "tip2": "Sumar R y J para obtener verde.",
+            "tip3": "arcoiris"
+        },
+        "level9":{
+            "tip1": "",
+            "tip2": "",
+            "tip3": "ascii"
+        },
+        "level10":{
+            "tip1": "",
+            "tip2": "",
+            "tip3": "polybius"
         }
     }
 }

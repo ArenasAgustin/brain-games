@@ -15,7 +15,7 @@ export default function Level8() {
         </div>
         <div className="level8__file">
           <p className="level8__letter">C</p>
-          <div className="level8__clue brown"></div>
+          <div className="level8__clue green"></div>
         </div>
         <div className="level8__file">
           <p className="level8__letter">D</p>
@@ -59,7 +59,7 @@ export default function Level8() {
         </div>
         <div className="level8__file">
           <p className="level8__letter">S</p>
-          <div className="level8__clue green"></div>
+          <div className="level8__clue brown"></div>
         </div>
         <div className="level8__file">
           <p className="level8__letter">T</p>
@@ -83,7 +83,7 @@ export default function Level8() {
         <div className="level8__guess">
           <div className="red"></div>
           <div className="yellow"></div>
-          <span>A + R</span>
+          <span>R + J</span>
           <div className="orange"></div>
           <span>J + A</span>
           <div className="blue"></div>

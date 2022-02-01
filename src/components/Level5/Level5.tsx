@@ -51,7 +51,7 @@ export default function Level5() {
         </div>
         <div className="level5__file">
           <p className="level5__letter">L</p>
-          <p className="level5__clue">322</p>
+          <p className="level5__clue">__</p>
         </div>
         <div className="level5__file">
           <p className="level5__letter">M</p>
