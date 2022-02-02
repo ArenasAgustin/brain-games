@@ -5,10 +5,14 @@ import { GiPadlock, GiPadlockOpen } from "react-icons/gi";
 import InputInterface from "../../interfaces/inputInterface";
 import validator from "../../utils/validator";
 import StateInterface from "../../interfaces/stateInterface";
-import { setLevelsArr } from "../../redux/actions";
+import { setLevelsArr, setScorePoints } from "../../redux/actions";
 import "./Input.scss";
 
-export default function Input({ solution, level }: InputInterface) {
+export default function Input({
+  solution,
+  level,
+  toggleAddScore,
+}: InputInterface) {
   const levelsArr = useAppSelector((state: StateInterface) => state.levelsArr);
   const dispatch = useAppDispatch();
 
@@ -40,6 +44,7 @@ export default function Input({ solution, level }: InputInterface) {
       });
 
       dispatch(setLevelsArr(newLevelsArr));
+      toggleAddScore();
       alert("Correct!");
     } else {
       alert("Incorrect!");
