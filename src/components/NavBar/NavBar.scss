@@ -33,8 +33,15 @@
     }
 
     & .nav__score-points{
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 700;
         margin: .5rem;
+    }
+
+    & .nav__level{
+        font-size: 20px;
+        font-weight: 700;
+        margin: .5rem;
+        color: #ffffff; 
     }
 }

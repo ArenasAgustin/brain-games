@@ -11,13 +11,13 @@ export default function Level2Page() {
   const toggleOpenClue = () => {
     setShowClue((prev) => !prev);
   };
-  
+
   const objData = JSON.parse(JSON.stringify(data));
 
   return (
     <div>
       <div>
-        <NavBar toggleOpenClue={toggleOpenClue} />
+        <NavBar toggleOpenClue={toggleOpenClue} level={2} />
       </div>
 
       <div>
@@ -29,7 +29,7 @@ export default function Level2Page() {
       </div>
 
       <div>
-        <TipPopup isOpen={isOpen} toggleOpenClue={toggleOpenClue} level={2}/>
+        <TipPopup isOpen={isOpen} toggleOpenClue={toggleOpenClue} level={2} />
       </div>
     </div>
   );

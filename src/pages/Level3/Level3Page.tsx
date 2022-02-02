@@ -17,7 +17,7 @@ export default function Level3Page() {
   return (
     <div>
       <div>
-        <NavBar toggleOpenClue={toggleOpenClue} />
+        <NavBar toggleOpenClue={toggleOpenClue} level={3} />
       </div>
 
       <div>

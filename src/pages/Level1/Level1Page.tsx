@@ -17,7 +17,7 @@ export default function Level1Page() {
   return (
     <div>
       <div>
-        <NavBar toggleOpenClue={toggleOpenClue} />
+        <NavBar toggleOpenClue={toggleOpenClue} level={1} />
       </div>
 
       <div>
@@ -29,7 +29,7 @@ export default function Level1Page() {
       </div>
 
       <div>
-        <TipPopup isOpen={isOpen} toggleOpenClue={toggleOpenClue} level={1}/>
+        <TipPopup isOpen={isOpen} toggleOpenClue={toggleOpenClue} level={1} />
       </div>
     </div>
   );
