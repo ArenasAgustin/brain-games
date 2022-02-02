@@ -7,10 +7,12 @@ export default function CluePopup({
   isOpen,
   toggleOpenClue,
   level,
+  toggleSubtractScore,
 }: {
   isOpen: boolean;
   toggleOpenClue: () => void;
   level: number;
+  toggleSubtractScore: (index: number) => void;
 }) {
   const [showClue, setShowClue] = useState([false, false, false]);
 
@@ -22,6 +24,7 @@ export default function CluePopup({
     else if (index === 0 && !newShowClue[index]) newShowClue[index] = true;
 
     setShowClue(newShowClue);
+    toggleSubtractScore(index);
   };
 
   const objData = JSON.parse(JSON.stringify(data));
