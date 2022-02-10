@@ -52,7 +52,7 @@ export default function Level8Page() {
 
       <div>
         <Input
-          solution={objData.solutions.solution1}
+          solution={objData.solutions.solution8}
           level={8}
           toggleAddScore={toggleAddScore}
         />
