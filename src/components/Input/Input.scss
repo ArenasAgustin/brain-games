@@ -23,7 +23,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: all 0.3s;
+            transition: color 0.5s;
             font-size: 1.8em;
             color: #00b8f0;
 
@@ -65,6 +65,7 @@
         position: relative;
         margin: .5em;
         border: none;
+        cursor: pointer;
 
         & .input__button-icon {
             position: absolute;

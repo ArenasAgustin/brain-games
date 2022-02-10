@@ -6,14 +6,18 @@ import NavBar from "../../components/NavBar/NavBar";
 import TipPopup from "../../components/TipPopup/TipPopup";
 import data from "../../data/data.json";
 import { setScorePoints } from "../../redux/actions";
+import CompletedPopup from "../../components/CompletedPopUp/CompletedPopup";
+import { useNavigate } from "react-router-dom";
 
 export default function Level2Page() {
   const objData = JSON.parse(JSON.stringify(data));
 
+  const [isCompleted, setIsCompleted] = useState(false);
   const [isOpen, setShowClue] = useState(false);
   const [points, setPoints] = useState(100);
 
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
   const toggleOpenClue = () => {
     setShowClue((prev) => !prev);
@@ -26,7 +30,14 @@ export default function Level2Page() {
   };
 
   const toggleAddScore = () => {
-    dispatch(setScorePoints(points));
+    if (!isCompleted) {
+      setIsCompleted(true);
+      dispatch(setScorePoints(points));
+    }
+  };
+
+  const handleNavigate = () => {
+    navigate("/select/level3");
   };
 
   return (
@@ -53,6 +64,13 @@ export default function Level2Page() {
           toggleOpenClue={toggleOpenClue}
           level={2}
           toggleSubtractScore={toggleSubtractScore}
+        />
+      </div>
+
+      <div>
+        <CompletedPopup
+          isCompleted={isCompleted}
+          handleNavigate={handleNavigate}
         />
       </div>
     </div>
