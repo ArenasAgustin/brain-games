@@ -45,9 +45,6 @@ export default function Input({
 
       dispatch(setLevelsArr(newLevelsArr));
       toggleAddScore();
-      alert("Correct!");
-    } else {
-      alert("Incorrect!");
     }
   };
 

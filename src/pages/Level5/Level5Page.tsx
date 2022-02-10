@@ -6,6 +6,8 @@ import TipPopup from "../../components/TipPopup/TipPopup";
 import data from "../../data/data.json";
 import { useAppDispatch } from "../../redux/hooks/hooks";
 import { setScorePoints } from "../../redux/actions";
+import CompletedPopup from "../../components/CompletedPopUp/CompletedPopup";
+import { useNavigate } from "react-router-dom";
 
 export default function Level5Page() {
   const objData = JSON.parse(JSON.stringify(data));
@@ -15,6 +17,7 @@ export default function Level5Page() {
   const [points, setPoints] = useState(100);
 
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
   const toggleOpenClue = () => {
     setShowClue((prev) => !prev);
@@ -31,6 +34,10 @@ export default function Level5Page() {
       setIsCompleted(true);
       dispatch(setScorePoints(points));
     }
+  };
+
+  const handleNavigate = () => {
+    navigate("/select/level6");
   };
 
   return (
@@ -57,6 +64,13 @@ export default function Level5Page() {
           toggleOpenClue={toggleOpenClue}
           level={5}
           toggleSubtractScore={toggleSubtractScore}
+        />
+      </div>
+
+      <div>
+        <CompletedPopup
+          isCompleted={isCompleted}
+          handleNavigate={handleNavigate}
         />
       </div>
     </div>

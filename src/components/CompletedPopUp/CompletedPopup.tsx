@@ -2,10 +2,16 @@ import React from "react";
 import { FaCheck } from "react-icons/fa";
 import "./CompletedPopup.scss";
 
-export default function CompletedPopup() {
+export default function CompletedPopup({
+  isCompleted,
+  handleNavigate,
+}: {
+  isCompleted: boolean;
+  handleNavigate: () => void;
+}) {
   return (
     <>
-      {true && (
+      {isCompleted && (
         <div className="completed-popup">
           <div className="completed-popup__content">
             <div className="completed-popup__content-icon">
@@ -17,7 +23,12 @@ export default function CompletedPopup() {
               <h1>Completaste el nivel</h1>
             </div>
             <div className="completed-popup__content-button">
-              <button className="completed-popup__button">Continuar</button>
+              <button
+                className="completed-popup__button"
+                onClick={handleNavigate}
+              >
+                Continuar
+              </button>
             </div>
           </div>
 
