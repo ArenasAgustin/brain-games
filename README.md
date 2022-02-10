@@ -10,6 +10,10 @@ Apretar el botón "Elegir nivel" para elegir el nivel que deseas jugar. Una vez 
 
 Para obtener una pista en el nivel tienes que apretar el botón "Pistas". Se abre una ventana con 2 pistas y la solución, para poder ver cada pista o la solución tienes que hacer clic en el cuadrado que corresponda. Para ver cada pista tienes que ver la anterior. Cada pista resta 25 puntos del puntaje que suma el nivel.
 
+## Video muestra
+
+https://user-images.githubusercontent.com/72575052/153484136-61b357e6-f7be-4e97-8d07-bf2aa50d7e68.mp4
+
 ## Link del juego
 
-    [Brain Games Es](https://arenasagustin.github.io/brain-games/)
+[Brain Games Es](https://arenasagustin.github.io/brain-games/)
