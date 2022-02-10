@@ -1,0 +1,79 @@
+.completed-popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    & .completed-popup__content {
+        position: relative;
+        width: 25em;
+        height: 18em;
+        padding: 0.9em;
+        z-index: 110;
+        box-shadow: 0.25em 0.25em 0.25em rgba(0, 0, 0, 0.25);
+        background-color: #000213;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & .completed-popup__content-icon {
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 50%;
+            font-size: 3em;
+            background-color: #02fe03;
+            color: #000;
+            position: relative;
+
+            & .completed-popup__div-icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        & .completed-popup__content-text {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin: 2em 0;
+        }
+
+        & .completed-popup__content-button {
+            text-decoration: none;
+            margin: .5rem;
+            cursor: pointer;
+
+            & .completed-popup__button {
+                width: 7rem;
+                height: 3rem;
+                border: #ffffff solid 3px;
+                background-color: #000213;
+                font-size: 18px;
+                font-weight: 700;
+                padding: .5rem;
+                color: #ffffff;
+                cursor: pointer;
+            }
+        }
+    }
+
+    & .completed-popup__window-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #25252593;
+        cursor: pointer;
+    }
+}

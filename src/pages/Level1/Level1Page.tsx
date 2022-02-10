@@ -6,6 +6,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import TipPopup from "../../components/TipPopup/TipPopup";
 import data from "../../data/data.json";
 import { setScorePoints } from "../../redux/actions";
+import CompletedPopup from "../../components/CompletedPopUp/CompletedPopup";
 
 export default function Level1Page() {
   const objData = JSON.parse(JSON.stringify(data));
@@ -58,6 +59,10 @@ export default function Level1Page() {
           level={1}
           toggleSubtractScore={toggleSubtractScore}
         />
+      </div>
+
+      <div>
+        <CompletedPopup />
       </div>
     </div>
   );
