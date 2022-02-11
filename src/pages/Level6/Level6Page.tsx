@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Input from "../../components/Input/Input";
 import Level6 from "../../components/Level6/Level6";
 import NavBar from "../../components/NavBar/NavBar";

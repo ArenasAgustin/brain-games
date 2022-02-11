@@ -1,4 +1,3 @@
-import React from "react";
 import LevelButtonInterface from "../../interfaces/levelButtonInterface";
 import { NavLink } from "react-router-dom";
 import "./ButtonLevel.scss";

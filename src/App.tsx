@@ -1,4 +1,3 @@
-import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import SelectLevel from "./pages/SelectLevel/SelectLevel";
@@ -12,7 +11,6 @@ import Level7 from "./pages/Level7/Level7Page";
 import Level8 from "./pages/Level8/Level8Page";
 import Level9 from "./pages/Level9/Level9Page";
 import Level10 from "./pages/Level10/Level10Page";
-import "./App.scss";
 
 function App() {
   return (

@@ -1,11 +1,11 @@
-import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { useAppSelector, useAppDispatch } from "../../redux/hooks/hooks";
 import { IoChevronForwardSharp } from "react-icons/io5";
 import { GiPadlock, GiPadlockOpen } from "react-icons/gi";
 import InputInterface from "../../interfaces/inputInterface";
 import validator from "../../utils/validator";
 import StateInterface from "../../interfaces/stateInterface";
-import { setLevelsArr, setScorePoints } from "../../redux/actions";
+import { setLevelsArr } from "../../redux/actions";
 import "./Input.scss";
 
 export default function Input({

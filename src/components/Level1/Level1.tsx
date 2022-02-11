@@ -1,4 +1,3 @@
-import React from "react";
 import "./Level1.scss";
 
 export default function Level1() {

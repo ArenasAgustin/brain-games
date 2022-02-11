@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useAppDispatch } from "../../redux/hooks/hooks";
 import Input from "../../components/Input/Input";
 import Level1 from "../../components/Level1/Level1";
