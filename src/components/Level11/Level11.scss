@@ -1,0 +1,59 @@
+.level11__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & .level11__puzzle {
+        width: calc(100% - 2em);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: .8em 1em;
+
+        & .level11__file {
+            margin-top: .5em;
+            animation: appear 5s linear infinite;
+
+            & .green {
+                color: #02fe02;
+            }
+
+            & .red {
+                color: #fe0202;
+            }
+
+            & .blue {
+                color: #02fefe;
+            }
+
+            & .grey {
+                color: #777777;
+            }
+        }
+    }
+}
+
+@keyframes appear {
+    0% {
+        font-size: 16px;
+    }
+
+    25% {
+        font-size: 0;
+    }
+}
+
+$delay: 0;
+
+@for $i from 1 through 4 {
+    div:nth-child(#{$i}) {
+        animation-delay: $delay + s;
+    }
+
+    $delay: $delay+1
+}
