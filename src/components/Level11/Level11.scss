@@ -16,23 +16,38 @@
         padding: .8em 1em;
 
         & .level11__file {
-            margin-top: .5em;
-            animation: appear 5s linear infinite;
+            margin: .5em;
+            font-size: 1.2em;
+            position: relative;
+            width: 1em;
+            height: 1em;
 
-            & .green {
-                color: #02fe02;
-            }
+            & .level11__letter {
+                opacity: 0;
+                animation-name: appear;
+                animation-duration: 4s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
 
-            & .red {
-                color: #fe0202;
-            }
+                &.green {
+                    color: #02fe02;
+                }
 
-            & .blue {
-                color: #02fefe;
-            }
+                &.red {
+                    color: #fe0202;
+                }
 
-            & .grey {
-                color: #777777;
+                &.blue {
+                    color: #02fefe;
+                }
+
+                &.grey {
+                    color: #777777;
+                }
             }
         }
     }
@@ -40,18 +55,22 @@
 
 @keyframes appear {
     0% {
-        font-size: 16px;
+        opacity: 1;
+    }
+
+    24% {
+        opacity: 1;
     }
 
     25% {
-        font-size: 0;
+        opacity: 0;
     }
 }
 
 $delay: 0;
 
 @for $i from 1 through 4 {
-    div:nth-child(#{$i}) {
+    .level11__letter:nth-child(#{$i}) {
         animation-delay: $delay + s;
     }
 

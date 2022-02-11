@@ -4,30 +4,33 @@ export default function Level11() {
   return (
     <div className="level11__container">
       <div className="level11__puzzle">
-        <span className="level11__file">
-          <span className="green">H</span>
-          <span className="red">R</span>
-          <span className="grey">M</span>
-          <span className="blue">E</span>
-        </span>
+        <div className="level11__file">
+          <div className="level11__letter green">H</div>
+          <div className="level11__letter grey">R</div>
+          <div className="level11__letter red">M</div>
+          <div className="level11__letter blue">E</div>
+        </div>
 
-        <span className="level11__file">
-          <span className="red">B</span>
-          <span className="grey">L</span>
-          <span className="green">A</span>
-        </span>
+        <div className="level11__file">
+          <div className="level11__letter red">B</div>
+          <div className="level11__letter blue">P</div>
+          <div className="level11__letter grey">L</div>
+          <div className="level11__letter green">A</div>
+        </div>
 
-        <span className="level11__file">
-          <span className="green">C</span>
-          <span className="grey">R</span>
-          <span className="red">A</span>
-        </span>
+        <div className="level11__file">
+          <div className="level11__letter grey">A</div>
+          <div className="level11__letter green">C</div>
+          <div className="level11__letter blue">R</div>
+          <div className="level11__letter red">A</div>
+        </div>
 
-        <span className="level11__file">
-          <span className="grey">S</span>
-          <span className="green">K</span>
-          <span className="red">T</span>
-        </span>
+        <div className="level11__file">
+          <div className="level11__letter blue">S</div>
+          <div className="level11__letter red">T</div>
+          <div className="level11__letter green">K</div>
+          <div className="level11__letter grey">W</div>
+        </div>
       </div>
     </div>
   );
