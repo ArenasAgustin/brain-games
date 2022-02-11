@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Input from "../../components/Input/Input";
-import Level10 from "../../components/Level10/Level10";
+import Level12 from "../../components/Level12/Level12";
 import NavBar from "../../components/NavBar/NavBar";
 import TipPopup from "../../components/TipPopup/TipPopup";
 import data from "../../data/data.json";
@@ -9,7 +9,7 @@ import { setScorePoints } from "../../redux/actions";
 import { useNavigate } from "react-router-dom";
 import CompletedPopup from "../../components/CompletedPopUp/CompletedPopup";
 
-export default function Level10Page() {
+export default function Level12Page() {
   const objData = JSON.parse(JSON.stringify(data));
 
   const [isCompleted, setIsCompleted] = useState(false);
@@ -37,23 +37,23 @@ export default function Level10Page() {
   };
 
   const handleNavigate = () => {
-    navigate("/select/level11");
+    navigate("/select");
   };
 
   return (
     <div>
       <div>
-        <NavBar toggleOpenClue={toggleOpenClue} level={10} />
+        <NavBar toggleOpenClue={toggleOpenClue} level={12} />
       </div>
 
       <div>
-        <Level10 />
+        <Level12 />
       </div>
 
       <div>
         <Input
-          solution={objData.solutions.solution10}
-          level={10}
+          solution={objData.solutions.solution12}
+          level={12}
           toggleAddScore={toggleAddScore}
         />
       </div>
@@ -62,7 +62,7 @@ export default function Level10Page() {
         <TipPopup
           isOpen={isOpen}
           toggleOpenClue={toggleOpenClue}
-          level={10}
+          level={12}
           toggleSubtractScore={toggleSubtractScore}
         />
       </div>

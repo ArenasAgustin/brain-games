@@ -10,7 +10,8 @@
     "solution8": "arcoiris",
     "solution9": "ascii",
     "solution10": "polybius",
-    "solution11": "hack"
+    "solution11": "hack",
+    "solution12": "12"
   },
 
   "tips": {
@@ -68,6 +69,11 @@
       "tip1": "Observa cada letra.",
       "tip2": "Las letras correctas son verdes.",
       "tip3": "hack"
+    },
+    "level12": {
+      "tip1": "Descifrar el código reemplazando las letras.",
+      "tip2": "Reemplace cada letra del cifrado de acuerdo con la información de la tabla.",
+      "tip3": "12"
     }
   }
 }

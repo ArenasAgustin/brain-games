@@ -37,7 +37,7 @@ export default function Level11Page() {
   };
 
   const handleNavigate = () => {
-    navigate("/select");
+    navigate("/select/level12");
   };
 
   return (
