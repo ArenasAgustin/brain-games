@@ -13,6 +13,7 @@ export default function Level12Page() {
   const objData = JSON.parse(JSON.stringify(data));
 
   const [isCompleted, setIsCompleted] = useState(false);
+  const [isCompletedOneTime, setIsCompletedOneTime] = useState(false);
   const [isOpen, setShowClue] = useState(false);
   const [points, setPoints] = useState(100);
 
@@ -32,7 +33,10 @@ export default function Level12Page() {
   const toggleAddScore = () => {
     if (!isCompleted) {
       setIsCompleted(true);
-      dispatch(setScorePoints(points));
+      if (!isCompletedOneTime) {
+        setIsCompletedOneTime(true);
+        dispatch(setScorePoints(points));
+      }
     }
   };
 
