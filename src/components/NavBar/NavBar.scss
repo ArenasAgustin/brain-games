@@ -34,12 +34,16 @@ $breakpoints:(sm: 540px,
         & .nav__div-button,
         &.nav__div-button {
             width: 4.5rem;
+            height: 2rem;
             border: #ffffff solid 3px;
             background-color: #000213;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             @include media-up(md) {
-                height: 2.5em;
-                width: 5em;
+                height: 2.5rem;
+                width: 5rem;
             }
 
             & .nav__button-text {

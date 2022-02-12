@@ -1,4 +1,4 @@
-.level1__container {
+.level12__container {
     width: 100%;
     height: 100%;
     display: flex;
@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
 
-    & .level1__puzzle {
+    & .level12__puzzle {
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -15,22 +15,22 @@
         flex-wrap: wrap;
         padding: .5em 1em;
 
-        & .level1__file {
+        & .level12__file {
             font-size: 20px;
             margin-top: .1em;
 
-            & .level1__letter {
+            & .level12__letter {
                 margin-bottom: 1px;
             }
 
-            & .level1__clue {
+            & .level12__clue {
                 border: #ffffff solid 1px;
                 width: 3rem;
             }
         }
     }
 
-    & .level1__guess-container{
+    & .level12__guess-container{
         margin: 1em 0;
         width: 100%;
         font-size: 24px;
