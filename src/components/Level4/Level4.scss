@@ -1,3 +1,14 @@
+$breakpoints:(sm: 350px,
+    md: 768px,
+    xl: 1200px,
+);
+
+@mixin media-up($breakpoint) {
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
 .level4__container {
     width: 100%;
     height: 100%;
@@ -13,11 +24,24 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        padding: .8em 1em;
+        padding: .3em .8em;
+
+        @include media-up(md) {
+            padding: .8em 1em;
+        }
 
         & .level4__file {
-            font-size: 20px;
-            margin-top: .5em;
+            font-size: 14px;
+            margin-top: .2em;
+
+            @include media-up(sm) {
+                font-size: 18px;
+                margin-top: .5em;
+            }
+
+            @include media-up(md) {
+                font-size: 20px;
+            }
 
             & .level4__letter {
                 margin-bottom: 1px;
@@ -25,22 +49,32 @@
 
             & .level4__clue {
                 border: #ffffff solid 1px;
-                width: 2rem;
+                width: 1.5rem;
                 padding: 1px .4em;
+
+                @include media-up(md) {
+                    width: 2rem;
+                }
             }
         }
     }
 
-    & .level4__guess-container{
-        margin: 1em 0;
+    & .level4__guess-container {
+        margin: .5em 0;
         width: 100%;
-        font-size: 24px;
-        font-weight: bold;
+
+        @include media-up(sm) {
+            margin: 1em 0;
+        }
 
         & .level4__guess {
             & img {
-                width: 2rem;
+                width: 1.5rem;
                 padding: 0 .2em;
+
+                @include media-up(md) {
+                    width: 2rem;
+                }
             }
         }
     }
