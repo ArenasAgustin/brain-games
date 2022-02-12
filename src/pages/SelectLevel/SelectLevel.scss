@@ -19,9 +19,12 @@ $breakpoints:(sm: 540px,
         & .select-level__button {
             & .select-level__div-button {
                 margin: .5rem;
-                width: 5em;
+                width: 4.5em;
                 border: #ffffff solid 3px;
 
+                @include media-up(md) {
+                    width: 5em;
+                }
 
                 & .select-level__button-text {
                     font-size: 16px;

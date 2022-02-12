@@ -22,12 +22,6 @@ export default function NavBar({
   return (
     <div className="nav__container">
       <div className="nav__links-container">
-        <NavLink className="nav__button" to="/">
-          <div className="nav__div-button">
-            <p className="nav__button-text">Menu</p>
-          </div>
-        </NavLink>
-
         <NavLink className="nav__button" to="/select">
           <div className="nav__div-button">
             <p className="nav__button-text">Niveles</p>
@@ -35,8 +29,14 @@ export default function NavBar({
         </NavLink>
       </div>
 
-      <div className="nav__level">
-        <p className="nav__level-text">Nivel: {level}</p>
+      <div className="nav__txt-container">
+        <div className="nav__level">
+          <p className="nav__level-text">Nivel: {level}</p>
+        </div>
+
+        <div className="nav__score">
+          <span className="nav__score-points">Puntos: {sPoints}</span>
+        </div>
       </div>
 
       <div className="nav__tips-container">

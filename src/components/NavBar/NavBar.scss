@@ -1,3 +1,14 @@
+$breakpoints:(sm: 540px,
+    md: 768px,
+    xl: 1200px,
+);
+
+@mixin media-up($breakpoint) {
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
 .nav__container {
     display: flex;
     justify-content: space-between;
@@ -13,35 +24,74 @@
 
     & .nav__button {
         text-decoration: none;
-        margin: .5rem;
+        margin: .2rem;
         cursor: pointer;
+
+        @include media-up(md) {
+            margin: .5rem;
+        }
 
         & .nav__div-button,
         &.nav__div-button {
-            width: 5rem;
-            height: 2.5rem;
+            width: 4.5rem;
             border: #ffffff solid 3px;
             background-color: #000213;
 
+            @include media-up(md) {
+                height: 2.5em;
+                width: 5em;
+            }
+
             & .nav__button-text {
-                font-size: 16px;
+                font-size: 13px;
                 font-weight: 700;
-                margin: .5rem;
+                margin: .1em 0;
                 color: #ffffff;
+
+                @include media-up(md) {
+                    font-size: 16px;
+                    margin: .5rem;
+                }
             }
         }
     }
 
-    & .nav__score-points{
-        font-size: 20px;
-        font-weight: 700;
-        margin: .5rem;
+    & .nav__txt-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include media-up(md) {
+            flex-direction: row;
+        }
+
+        & .nav__score {
+            @include media-up(md) {
+                display: none;
+            }
+        }
     }
 
-    & .nav__level{
-        font-size: 20px;
+    & .nav__tips-container {
+        & .nav__score-points {
+            display: none;
+
+            @include media-up(md) {
+                display: initial;
+            }
+        }
+    }
+
+    & .nav__score-points,
+    & .nav__level {
+        font-size: 14px;
         font-weight: 700;
-        margin: .5rem;
-        color: #ffffff; 
+        margin: .2rem;
+
+        @include media-up(md) {
+            font-size: 20px;
+            margin: .5rem;
+        }
     }
 }
