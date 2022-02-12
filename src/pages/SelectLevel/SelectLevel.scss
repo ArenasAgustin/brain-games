@@ -1,3 +1,14 @@
+$breakpoints:(sm: 540px,
+    md: 768px,
+    xl: 1200px,
+);
+
+@mixin media-up($breakpoint) {
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
 .select-level__container {
     & .select-level__nav {
         display: flex;
@@ -15,9 +26,13 @@
                 & .select-level__button-text {
                     font-size: 16px;
                     font-weight: 700;
-                    margin: .5rem;
+                    margin: .2em 0;
                     color: #ffffff;
                     text-decoration: none;
+
+                    @include media-up(md) {
+                        margin: .5rem;
+                    }
                 }
             }
         }
@@ -29,6 +44,10 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        padding: 0 1.5rem;
+        padding: 0 .8rem;
+
+        @include media-up(md) {
+            padding: 0 1.5rem;
+        }
     }
 }
