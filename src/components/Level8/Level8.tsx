@@ -85,7 +85,7 @@ export default function Level8() {
           <span>R + J</span>
           <div className="orange"></div>
           <span>J + A</span>
-          <div className="blue"></div>
+          <div className="yellow"></div>
           <span>J + A</span>
           <div className="brown"></div>
         </div>
