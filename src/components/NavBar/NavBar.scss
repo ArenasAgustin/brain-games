@@ -39,6 +39,7 @@ $breakpoints:(sm: 540px,
         text-decoration: none;
         margin: .2rem;
         cursor: pointer;
+        border: none;
 
         @include media-up(md) {
             margin: .5rem;

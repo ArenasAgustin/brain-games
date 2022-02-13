@@ -1,3 +1,14 @@
+$breakpoints:(sm: 350px,
+    md: 768px,
+    xl: 1200px,
+);
+
+@mixin media-up($breakpoint) {
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
 .level11__container {
     width: 100%;
     height: 100%;
@@ -13,14 +24,26 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        padding: .8em 1em;
+        padding: .3em .8em;
+
+        @include media-up(md) {
+            padding: .8em 1em;
+        }
 
         & .level11__file {
-            margin: .5em;
-            font-size: 1.2em;
             position: relative;
             width: 1em;
             height: 1em;
+            font-size: 14px;
+            margin: .5em;
+
+            @include media-up(sm) {
+                font-size: 18px;
+            }
+
+            @include media-up(md) {
+                font-size: 20px;
+            }
 
             & .level11__letter {
                 opacity: 0;
