@@ -44,8 +44,7 @@ $breakpoints:(sm: 540px,
             margin: .5rem;
         }
 
-        & .nav__div-button,
-        &.nav__div-button {
+        & .nav__div-button {
             width: 4.5rem;
             height: 2rem;
             border: #ffffff solid 3px;
@@ -62,7 +61,7 @@ $breakpoints:(sm: 540px,
             & .nav__button-text {
                 font-size: 13px;
                 font-weight: 700;
-                margin: .1em 0;
+                margin: .1rem 0;
                 color: #ffffff;
 
                 @include media-up(md) {

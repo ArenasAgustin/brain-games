@@ -42,10 +42,12 @@ export default function NavBar({
       <div className="nav__tips-container">
         <span className="nav__score-points">Puntos: {sPoints}</span>
         <button
-          className="nav__button nav__div-button"
+          className="nav__button"
           onClick={toggleOpenClue}
         >
-          <p className="nav__button-text">Pistas</p>
+          <div className="nav__div-button">
+            <p className="nav__button-text">Pistas</p>
+          </div>
         </button>
       </div>
     </div>
