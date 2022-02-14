@@ -5,6 +5,10 @@ export default function Level11() {
     <div className="level11__container">
       <div className="level11__puzzle">
         <div className="level11__file">
+          <div className="level11__clue"></div>
+        </div>
+
+        <div className="level11__file">
           <div className="level11__letter green">H</div>
           <div className="level11__letter grey">R</div>
           <div className="level11__letter red">M</div>

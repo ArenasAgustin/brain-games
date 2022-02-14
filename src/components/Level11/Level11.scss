@@ -45,6 +45,23 @@ $breakpoints:(sm: 350px,
                 font-size: 20px;
             }
 
+            & .level11__clue {
+                width: 14px;
+                height: 14px;
+                background-color: #02fe02;
+                animation: clue-animation 4s linear infinite;
+
+                @include media-up(sm) {
+                    width: 18px;
+                    height: 18px;
+                }
+
+                @include media-up(sm) {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
             & .level11__letter {
                 opacity: 0;
                 animation-name: appear;
@@ -73,6 +90,20 @@ $breakpoints:(sm: 350px,
                 }
             }
         }
+    }
+}
+
+@keyframes clue-animation {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 
