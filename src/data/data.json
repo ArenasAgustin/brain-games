@@ -21,12 +21,12 @@
   "tips": {
     "level1": {
       "tip1": "Descifrar el código reemplazando las letras.",
-      "tip2": "Reemplace cada letra del cifrado de acuerdo con la información de la tabla.",
+      "tip2": "Reemplaza cada letra del cifrado de acuerdo con la información de la tabla.",
       "tip3": "descifrar"
     },
     "level2": {
       "tip1": "Descifrar el código reemplazando las letras.",
-      "tip2": "Reemplace cada letra del cifrado de acuerdo con la información de la tabla.",
+      "tip2": "Reemplaza cada letra del cifrado de acuerdo con la información de la tabla.",
       "tip3": "encriptar"
     },
     "level3": {
@@ -46,7 +46,7 @@
     },
     "level6": {
       "tip1": "<- significa que moverse a la izquierda, y -> significa que moverse a la derecha.",
-      "tip2": "Comience desde E y muévase tantas veces como se indica.",
+      "tip2": "Comienza desde E y muévase tantas veces como se indica.",
       "tip3": "enigma"
     },
     "level7": {
@@ -75,9 +75,14 @@
       "tip3": "hack"
     },
     "level12": {
-      "tip1": "Mire la secuencia de los códigos para encontrar la solución.",
-      "tip2": "Reemplace cada letra del cifrado de acuerdo con la información de la tabla.",
+      "tip1": "Mira la secuencia de los códigos para encontrar la solución.",
+      "tip2": "Reemplaza cada letra del cifrado de acuerdo con la información de la tabla.",
       "tip3": "12"
+    },
+    "level13": {
+      "tip1": "Obtenen la palabra de la cuadrícula, teniendo en cuenta los números en orden ascendente.",
+      "tip2": "Une las letras en el orden de la fila, en orden 1234.",
+      "tip3": "criptografía"
     }
   }
 }
