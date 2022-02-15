@@ -37,51 +37,64 @@ $breakpoints:(sm: 350px,
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 1.1em;
-                height: 1em;
-                padding: .4em .8em;
+                width: 1.1rem;
+                height: 1rem;
+                padding: .4rem .8rem;
 
                 @include media-up(sm) {
-                    width: 1.5em;
-                    padding: .5em .9em;
+                    width: 1.5rem;
+                    padding: .5rem .9rem;
                 }
 
                 @include media-up(md) {
-                    width: 2.5em;
-                    padding: .5em 1em;
-                    margin: .2em;
+                    width: 2.5rem;
+                    padding: .5rem 1rem;
+                    margin: .2rem;
                 }
             }
         }
 
         & .level13__div-rows {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
             & .level13__row {
-                width: 100%;
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
                 background-color: #333333;
                 border: #fff solid 2px;
-                margin: .3rem;
+                margin: .3rem 3rem;
+
+                @include media-up(sm) {
+                    margin: .3rem 4rem;
+                }
+
+                @include media-up(md) {
+                    width: 30%;
+                }
 
                 & .level13__row-text {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: 1.1em;
-                    height: 1em;
-                    padding: .4em .8em;
+                    width: 1.1rem;
+                    height: 1rem;
+                    padding: .4rem .8rem;
 
                     @include media-up(sm) {
-                        width: 1.5em;
-                        padding: .5em .9em;
+                        width: 1.5rem;
+                        padding: .5rem .9rem;
                     }
 
                     @include media-up(md) {
-                        width: 2.5em;
-                        padding: .6em 1em;
-                        margin: .2em;
+                        width: 2.5rem;
+                        padding: .6rem 1rem;
+                        margin: .2rem;
                     }
                 }
             }

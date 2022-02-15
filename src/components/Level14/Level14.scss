@@ -35,25 +35,27 @@ $breakpoints:(sm: 350px,
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 1.1em;
-                height: 1em;
-                padding: .4em .8em;
-                margin: .1em;
+                width: 1rem;
+                height: 1rem;
+                padding: .4rem .8rem;
+                margin: .1rem;
 
                 @include media-up(sm) {
-                    width: 1.5em;
-                    padding: .5em .9em;
+                    width: 1.5rem;
+                    padding: .5rem .9rem;
                 }
 
                 @include media-up(md) {
-                    width: 2.5em;
-                    padding: .5em 1em;
-                    margin: .2em;
+                    width: 2.5rem;
+                    padding: .5rem 1rem;
+                    margin: .2rem;
                 }
             }
         }
 
         & .level14__div-rows {
+            width: 100%;
+
             & .level14__row {
                 width: 100%;
                 display: flex;
@@ -65,20 +67,20 @@ $breakpoints:(sm: 350px,
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: 1.1em;
-                    height: 1em;
-                    padding: .4em .8em;
-                    margin: .1em;
+                    width: 1rem;
+                    height: 1rem;
+                    padding: .4rem .8rem;
+                    margin: .1rem;
 
                     @include media-up(sm) {
-                        width: 1.5em;
-                        padding: .5em .9em;
+                        width: 1.5rem;
+                        padding: .5rem .9rem;
                     }
 
                     @include media-up(md) {
-                        width: 2.5em;
-                        padding: .5em 1em;
-                        margin: .2em;
+                        width: 2.5rem;
+                        padding: .5rem 1rem;
+                        margin: .2rem;
                     }
 
                 }
@@ -88,20 +90,20 @@ $breakpoints:(sm: 350px,
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: 1.1em;
-                    height: 1em;
-                    padding: .4em .8em;
-                    margin: .1em;
+                    width: 1rem;
+                    height: 1rem;
+                    padding: .4rem .8rem;
+                    margin: .1rem;
 
                     @include media-up(sm) {
-                        width: 1.5em;
-                        padding: .5em .9em;
+                        width: 1.5rem;
+                        padding: .5rem .9rem;
                     }
 
                     @include media-up(md) {
-                        width: 2.5em;
-                        padding: .6em 1em;
-                        margin: .2em;
+                        width: 2.5rem;
+                        padding: .5rem 1rem;
+                        margin: .2rem;
                     }
                 }
             }
@@ -109,13 +111,13 @@ $breakpoints:(sm: 350px,
     }
 
     & .level14__guess-container {
-        margin: .5em 0;
+        margin: .5rem 0;
         width: 100%;
         font-size: 18px;
         font-weight: bold;
 
         @include media-up(md) {
-            margin: 1em 0;
+            margin: 1rem 0;
             font-size: 24px;
         }
     }
