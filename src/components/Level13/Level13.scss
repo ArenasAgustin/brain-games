@@ -1,0 +1,90 @@
+$breakpoints:(sm: 350px,
+    md: 768px,
+    xl: 1200px,
+);
+
+@mixin media-up($breakpoint) {
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
+.level13__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & .level13__puzzle {
+        width: calc(100% - 2em);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & .level13__div-columns-headers {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: .3rem;
+            border: #000213 solid 2px;
+
+            & .level13__column-header {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 1.1em;
+                height: 1em;
+                padding: .4em .8em;
+
+                @include media-up(sm) {
+                    width: 1.5em;
+                    padding: .5em .9em;
+                }
+
+                @include media-up(md) {
+                    width: 2.5em;
+                    padding: .5em 1em;
+                    margin: .2em;
+                }
+            }
+        }
+
+        & .level13__div-rows {
+            & .level13__row {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                background-color: #333333;
+                border: #fff solid 2px;
+                margin: .3rem;
+
+                & .level13__row-text {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 1.1em;
+                    height: 1em;
+                    padding: .4em .8em;
+
+                    @include media-up(sm) {
+                        width: 1.5em;
+                        padding: .5em .9em;
+                    }
+
+                    @include media-up(md) {
+                        width: 2.5em;
+                        padding: .6em 1em;
+                        margin: .2em;
+                    }
+                }
+            }
+        }
+    }
+}

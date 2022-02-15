@@ -1,4 +1,6 @@
 {
+  "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+
   "solutions": {
     "solution1": "descifrar",
     "solution2": "encriptar",
@@ -11,7 +13,9 @@
     "solution9": "ascii",
     "solution10": "polybius",
     "solution11": "hack",
-    "solution12": "12"
+    "solution12": "12",
+    "solution13": "criptografia",
+    "solution13b": "criptografía"
   },
 
   "tips": {

@@ -10,6 +10,7 @@ import "./Input.scss";
 
 export default function Input({
   solution,
+  solution2 = "",
   level,
   toggleAddScore,
 }: InputInterface) {
@@ -32,15 +33,16 @@ export default function Input({
   const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     let isValidAux = validator(stateLocal.value, solution);
+    let isValidAux2 = validator(stateLocal.value, solution2);
 
-    if (isValidAux) {
+    if (isValidAux || isValidAux2) {
       let newLevelsArr = [...stateLocal.auxLevelsArr];
-      newLevelsArr[level - 1] = isValidAux;
+      newLevelsArr[level - 1] = isValidAux || isValidAux2;
 
       setStateLocal({
         ...stateLocal,
         auxLevelsArr: newLevelsArr,
-        isValid: isValidAux,
+        isValid: isValidAux || isValidAux2,
       });
 
       dispatch(setLevelsArr(newLevelsArr));
