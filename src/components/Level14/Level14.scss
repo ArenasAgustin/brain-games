@@ -1,0 +1,122 @@
+$breakpoints:(sm: 350px,
+    md: 768px,
+    xl: 1200px,
+);
+
+@mixin media-up($breakpoint) {
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
+.level14__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & .level14__puzzle {
+        width: calc(100% - 2em);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & .level14__div-columns-headers {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            & .level14__column-header {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 1.1em;
+                height: 1em;
+                padding: .4em .8em;
+                margin: .1em;
+
+                @include media-up(sm) {
+                    width: 1.5em;
+                    padding: .5em .9em;
+                }
+
+                @include media-up(md) {
+                    width: 2.5em;
+                    padding: .5em 1em;
+                    margin: .2em;
+                }
+            }
+        }
+
+        & .level14__div-rows {
+            & .level14__row {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                & .level14__row-header {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 1.1em;
+                    height: 1em;
+                    padding: .4em .8em;
+                    margin: .1em;
+
+                    @include media-up(sm) {
+                        width: 1.5em;
+                        padding: .5em .9em;
+                    }
+
+                    @include media-up(md) {
+                        width: 2.5em;
+                        padding: .5em 1em;
+                        margin: .2em;
+                    }
+
+                }
+
+                & .level14__row-text {
+                    background-color: #333333;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 1.1em;
+                    height: 1em;
+                    padding: .4em .8em;
+                    margin: .1em;
+
+                    @include media-up(sm) {
+                        width: 1.5em;
+                        padding: .5em .9em;
+                    }
+
+                    @include media-up(md) {
+                        width: 2.5em;
+                        padding: .6em 1em;
+                        margin: .2em;
+                    }
+                }
+            }
+        }
+    }
+
+    & .level14__guess-container {
+        margin: .5em 0;
+        width: 100%;
+        font-size: 18px;
+        font-weight: bold;
+
+        @include media-up(md) {
+            margin: 1em 0;
+            font-size: 24px;
+        }
+    }
+}

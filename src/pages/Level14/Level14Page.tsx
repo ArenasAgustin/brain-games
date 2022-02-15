@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Input from "../../components/Input/Input";
-import Level13 from "../../components/Level13/Level13";
+import Level14 from "../../components/Level14/Level14";
 import NavBar from "../../components/NavBar/NavBar";
 import TipPopup from "../../components/TipPopup/TipPopup";
 import data from "../../data/data.json";
@@ -41,24 +41,23 @@ export default function Level12Page() {
   };
 
   const handleNavigate = () => {
-    navigate("/select/level14");
+    navigate("/select");
   };
 
   return (
     <div>
       <div>
-        <NavBar toggleOpenClue={toggleOpenClue} level={13} />
+        <NavBar toggleOpenClue={toggleOpenClue} level={14} />
       </div>
 
       <div>
-        <Level13 />
+        <Level14 />
       </div>
 
       <div>
         <Input
-          solution={objData.solutions.solution13}
-          solution2={objData.solutions.solution13b}
-          level={13}
+          solution={objData.solutions.solution14}
+          level={14}
           toggleAddScore={toggleAddScore}
         />
       </div>
@@ -67,7 +66,7 @@ export default function Level12Page() {
         <TipPopup
           isOpen={isOpen}
           toggleOpenClue={toggleOpenClue}
-          level={13}
+          level={14}
           toggleSubtractScore={toggleSubtractScore}
         />
       </div>

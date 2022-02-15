@@ -14,6 +14,7 @@ import Level10 from "./pages/Level10/Level10Page";
 import Level11 from "./pages/Level11/Level11Page";
 import Level12 from "./pages/Level12/Level12Page";
 import Level13 from "./pages/Level13/Level13Page";
+import Level14 from "./pages/Level14/Level14Page";
 
 function App() {
   return (
@@ -48,6 +49,8 @@ function App() {
         <Route path="/select/level12" element={<Level12 />} />
 
         <Route path="/select/level13" element={<Level13 />} />
+
+        <Route path="/select/level14" element={<Level14 />} />
 
         <Route path="*" element={<Home />} />
       </Routes>
