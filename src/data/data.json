@@ -16,7 +16,8 @@
     "solution12": "12",
     "solution13": "criptografia",
     "solution13b": "criptografía",
-    "solution14": "fritz nebel"
+    "solution14": "fritz nebel",
+    "solution15": "francmason"
   },
 
   "tips": {
@@ -89,6 +90,11 @@
       "tip1": "Cada dos letras se representa una letra, ten en cuenta el espacio.",
       "tip2": "Primero son las filas y luego las columnas.",
       "tip3": "fritz nebel"
+    },
+    "level15": {
+      "tip1": "Intercambiar los símbolos, que son fragmentos en una cuadrícula, por letras .",
+      "tip2": "Mira la cuadrícula y encontrará símbolos similares: con punto y sin punto.",
+      "tip3": "francmason"
     }
   }
 }
