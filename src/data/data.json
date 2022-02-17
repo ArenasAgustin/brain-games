@@ -1,5 +1,5 @@
 {
-  "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+  "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
 
   "solutions": {
     "solution1": "descifrar",
@@ -95,6 +95,11 @@
       "tip1": "Intercambiar los símbolos, que son fragmentos en una cuadrícula, por letras .",
       "tip2": "Mira la cuadrícula y encontrará símbolos similares: con punto y sin punto.",
       "tip3": "francmason"
+    },
+    "level16": {
+      "tip1": "Cada cuadro es un botón, asigna el número de acuerdo a los colores.",
+      "tip2": "Usa los primeros 3 botones en orden de izquierda a derecha.",
+      "tip3": "0 1 0 1"
     }
   }
 }

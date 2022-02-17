@@ -9,7 +9,7 @@ import { setScorePoints } from "../../redux/actions";
 import { useNavigate } from "react-router-dom";
 import CompletedPopup from "../../components/CompletedPopUp/CompletedPopup";
 
-export default function Level12Page() {
+export default function Level15Page() {
   const objData = JSON.parse(JSON.stringify(data));
 
   const [isCompleted, setIsCompleted] = useState(false);
@@ -41,7 +41,7 @@ export default function Level12Page() {
   };
 
   const handleNavigate = () => {
-    navigate("/select");
+    navigate("/select/level16");
   };
 
   return (

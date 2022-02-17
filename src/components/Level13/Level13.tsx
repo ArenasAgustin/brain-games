@@ -12,7 +12,7 @@ export default function Level13() {
         </div>
         <div className="level13__div-rows">
           <div className="level13__row">
-            <span className="level13__row-text">Y</span>
+            <span className="level13__row-text">I</span>
             <span className="level13__row-text">R</span>
             <span className="level13__row-text">P</span>
             <span className="level13__row-text">C</span>
