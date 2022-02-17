@@ -1,3 +1,14 @@
+$breakpoints:(sm: 350px,
+    md: 768px,
+    xl: 1200px,
+);
+
+@mixin media-up($breakpoint) {
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
 .tip__wrapper-div {
     position: absolute;
     top: 0;
@@ -11,8 +22,8 @@
 
     & .tip__window {
         position: relative;
-        width: 30em;
-        height: 25em;
+        width: 90%;
+        height: 23rem;
         padding: 0.9em;
         z-index: 110;
         box-shadow: 0.25em 0.25em 0.25em rgba(0, 0, 0, 0.25);
@@ -21,6 +32,15 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        @include media-up(sm) {
+            height: 25em;
+            padding: 0.9em;
+        }
+
+        @include media-up(md) {
+            width: 30em;
+        }
 
         & .tip__button-close {
             position: absolute;
@@ -42,9 +62,18 @@
         }
 
         & .tip__header {
-            font-size: 1.2em;
+            font-size: .8em;
             font-weight: bold;
             margin-bottom: 0.5em;
+
+            @include media-up(sm) {
+                font-size: 1em;
+                margin-bottom: 0.5em;
+            }
+
+            @include media-up(md) {
+                font-size: 1.2em;
+            }
         }
 
         & .tip__body {
@@ -62,12 +91,21 @@
                 align-items: flex-start;
                 cursor: pointer;
                 word-wrap: break-word;
-                margin: .5em;
+                margin: .3em;
                 padding: .5em;
-                width: 27.6em;
+                width: 17em;
                 height: 4.6em;
 
-                & .tip__tip-text{
+                @include media-up(sm) {
+                    width: 20em;
+                }
+
+                @include media-up(md) {
+                    margin: .5em;
+                    width: 27.6em;
+                }
+
+                & .tip__tip-text {
                     display: none;
                 }
 
@@ -76,12 +114,33 @@
                     text-align: left;
                 }
 
-                & .active{
+                & .active {
                     display: initial
                 }
 
-                &.active{
+                &.active {
                     border: #00b8f0 solid 3px;
+                }
+
+                & .tip__tip-header {
+                    font-size: 1.2em;
+
+                    @include media-up(md) {
+                        font-size: initial;
+                    }
+                }
+
+                & .tip__tip-text,
+                & .tip__tip-clue {
+                    font-size: .9em;
+
+                    @include media-up(md) {
+                        font-size: 1em;
+                    }
+
+                    @include media-up(md) {
+                        font-size: initial;
+                    }
                 }
             }
         }

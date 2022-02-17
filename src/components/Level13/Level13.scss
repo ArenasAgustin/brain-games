@@ -1,0 +1,103 @@
+$breakpoints:(sm: 350px,
+    md: 768px,
+    xl: 1200px,
+);
+
+@mixin media-up($breakpoint) {
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
+.level13__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & .level13__puzzle {
+        width: calc(100% - 2em);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & .level13__div-columns-headers {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: .3rem;
+            border: #000213 solid 2px;
+
+            & .level13__column-header {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 1.1rem;
+                height: 1rem;
+                padding: .4rem .8rem;
+
+                @include media-up(sm) {
+                    width: 1.5rem;
+                    padding: .5rem .9rem;
+                }
+
+                @include media-up(md) {
+                    width: 2.5rem;
+                    padding: .5rem 1rem;
+                    margin: .2rem;
+                }
+            }
+        }
+
+        & .level13__div-rows {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            & .level13__row {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                background-color: #333333;
+                border: #fff solid 2px;
+                margin: .3rem 3rem;
+
+                @include media-up(sm) {
+                    margin: .3rem 4rem;
+                }
+
+                @include media-up(md) {
+                    width: 30%;
+                }
+
+                & .level13__row-text {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 1.1rem;
+                    height: 1rem;
+                    padding: .4rem .8rem;
+
+                    @include media-up(sm) {
+                        width: 1.5rem;
+                        padding: .5rem .9rem;
+                    }
+
+                    @include media-up(md) {
+                        width: 2.5rem;
+                        padding: .6rem 1rem;
+                        margin: .2rem;
+                    }
+                }
+            }
+        }
+    }
+}

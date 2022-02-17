@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 import data from "../../data/data.json";
 import "./TipPopup.scss";

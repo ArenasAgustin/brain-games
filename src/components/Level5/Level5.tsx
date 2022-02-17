@@ -1,4 +1,3 @@
-import React from "react";
 import "./Level5.scss";
 
 export default function Level5() {

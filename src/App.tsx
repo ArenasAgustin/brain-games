@@ -1,4 +1,3 @@
-import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import SelectLevel from "./pages/SelectLevel/SelectLevel";
@@ -12,7 +11,12 @@ import Level7 from "./pages/Level7/Level7Page";
 import Level8 from "./pages/Level8/Level8Page";
 import Level9 from "./pages/Level9/Level9Page";
 import Level10 from "./pages/Level10/Level10Page";
-import "./App.scss";
+import Level11 from "./pages/Level11/Level11Page";
+import Level12 from "./pages/Level12/Level12Page";
+import Level13 from "./pages/Level13/Level13Page";
+import Level14 from "./pages/Level14/Level14Page";
+import Level15 from "./pages/Level15/Level15Page";
+import Level16 from "./pages/Level16/Level16Page";
 
 function App() {
   return (
@@ -41,6 +45,18 @@ function App() {
         <Route path="/select/level9" element={<Level9 />} />
 
         <Route path="/select/level10" element={<Level10 />} />
+
+        <Route path="/select/level11" element={<Level11 />} />
+
+        <Route path="/select/level12" element={<Level12 />} />
+
+        <Route path="/select/level13" element={<Level13 />} />
+
+        <Route path="/select/level14" element={<Level14 />} />
+
+        <Route path="/select/level15" element={<Level15 />} />
+
+        <Route path="/select/level16" element={<Level16 />} />
 
         <Route path="*" element={<Home />} />
       </Routes>

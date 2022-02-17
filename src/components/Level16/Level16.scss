@@ -1,0 +1,76 @@
+$breakpoints:(sm: 350px,
+    md: 768px,
+    xl: 1200px,
+);
+
+@mixin media-up($breakpoint) {
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
+.level16__container {
+    width: calc(100% - 2rem);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+    & .level16__puzzle {
+        width: calc(100% - 2em);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        & .level16__puzzle-item {
+            margin: .5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            @include media-up(sm) {
+                margin: .8rem;
+            }
+
+            & .level16__puzzle-button {
+                width: 2rem;
+                height: 2rem;
+                border-radius: .5rem;
+                border: #fff solid 3px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                font-size: 14px;
+
+                @include media-up(sm) {
+                    font-size: 18px;
+                }
+
+                @include media-up(md) {
+                    font-size: 20px;
+                }
+            }
+
+            & .level16__puzzle-button-color {
+                width: 2rem;
+                height: .3rem;
+                border-radius: .5rem;
+                margin: .3rem;
+
+                &.level16__puzzle-button-color-green {
+                    background-color: #00ff00;
+                }
+
+                &.level16__puzzle-button-color-red {
+                    background-color: #ff0000;
+                }
+            }
+        }
+    }
+}

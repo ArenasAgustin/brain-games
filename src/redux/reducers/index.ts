@@ -5,7 +5,7 @@ import { GET_LEVELS_ARR, GET_SCORE_POINTS, SET_LEVELS_ARR, SET_SCORE_POINTS } fr
 const levelsArr: boolean[] = [];
 
 const levelsFunction = () => {
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 16; i++) {
         levelsArr.push(false);
     }
 };

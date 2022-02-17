@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useAppDispatch } from "../../redux/hooks/hooks";
 import Input from "../../components/Input/Input";
 import Level1 from "../../components/Level1/Level1";
@@ -13,6 +13,7 @@ export default function Level1Page() {
   const objData = JSON.parse(JSON.stringify(data));
 
   const [isCompleted, setIsCompleted] = useState(false);
+  const [isCompletedOneTime, setIsCompletedOneTime] = useState(false);
   const [isOpen, setShowClue] = useState(false);
   const [points, setPoints] = useState(100);
 
@@ -32,7 +33,10 @@ export default function Level1Page() {
   const toggleAddScore = () => {
     if (!isCompleted) {
       setIsCompleted(true);
-      dispatch(setScorePoints(points));
+      if (!isCompletedOneTime) {
+        setIsCompletedOneTime(true);
+        dispatch(setScorePoints(points));
+      }
     }
   };
 

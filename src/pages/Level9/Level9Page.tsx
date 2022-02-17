@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Input from "../../components/Input/Input";
 import Level9 from "../../components/Level9/Level9";
 import NavBar from "../../components/NavBar/NavBar";
@@ -13,6 +13,7 @@ export default function Level9Page() {
   const objData = JSON.parse(JSON.stringify(data));
 
   const [isCompleted, setIsCompleted] = useState(false);
+  const [isCompletedOneTime, setIsCompletedOneTime] = useState(false);
   const [isOpen, setShowClue] = useState(false);
   const [points, setPoints] = useState(100);
 
@@ -32,7 +33,10 @@ export default function Level9Page() {
   const toggleAddScore = () => {
     if (!isCompleted) {
       setIsCompleted(true);
-      dispatch(setScorePoints(points));
+      if (!isCompletedOneTime) {
+        setIsCompletedOneTime(true);
+        dispatch(setScorePoints(points));
+      }
     }
   };
 
