@@ -19,8 +19,10 @@ export default function Level16({
     const newSolution = [...solution];
 
     newSolution[index] = newSolution[index] === 0 ? 1 : 0;
-    newSolution[index + 1] = newSolution[index + 1] === 0 ? 1 : 0;
-    newSolution[index - 1] = newSolution[index - 1] === 0 ? 1 : 0;
+    if (index !== 3)
+      newSolution[index + 1] = newSolution[index + 1] === 0 ? 1 : 0;
+    if (index !== 0)
+      newSolution[index - 1] = newSolution[index - 1] === 0 ? 1 : 0;
 
     setSolution(newSolution);
   };
