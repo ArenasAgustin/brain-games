@@ -118,7 +118,7 @@ export default function Level1() {
 
       <div className="level12__guess-container">
         <span className="level12__guess">
-          NXOEJ &nbsp; FE &nbsp; NAVEP
+          NXOEJM &nbsp; FEP &nbsp; NAWEP
         </span>
       </div>
     </div>

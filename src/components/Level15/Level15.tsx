@@ -99,16 +99,22 @@ export default function Level15() {
           <div className="level15__guess-dot level15__guess-dot--2"></div>
         </div>
 
-        <div className="level15__guess-item level15__guess-item--5">
+        <div className="level15__guess-item level15__guess-item--5"></div>
+
+        <div className="level15__guess-item level15__guess-item--6">
           <div className="level15__guess-dot level15__guess-dot--3"></div>
         </div>
 
-        <div className="level15__guess-item level15__guess-item--6"></div>
-
         <div className="level15__guess-item level15__guess-item--7"></div>
 
-        <div className="level15__guess-item level15__guess-item--8">
+        <div className="level15__guess-item level15__guess-item--8"></div>
+
+        <div className="level15__guess-item level15__guess-item--9">
           <div className="level15__guess-dot level15__guess-dot--4"></div>
+        </div>
+
+        <div className="level15__guess-item level15__guess-item--10">
+          <div className="level15__guess-dot level15__guess-dot--5"></div>
         </div>
       </div>
     </div>

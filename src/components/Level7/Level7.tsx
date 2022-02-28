@@ -12,7 +12,7 @@ export default function Level7() {
       </div>
 
       <div className="level7__guess-container">
-        <span className="level7__guess">10 21 5 7 15 19</span>
+        <span className="level7__guess">10 22 5 7 16 20</span>
       </div>
     </div>
   );
