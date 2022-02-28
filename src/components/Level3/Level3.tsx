@@ -112,8 +112,8 @@ export default function Level3() {
 
       <div className="level3__guess-container">
         <span className="level3__guess">
-          2 &nbsp; 9 &nbsp; 11 &nbsp; O/B(J-R+F) &nbsp; 19 &nbsp; P-B+D &nbsp;
-          13 &nbsp; 7 &nbsp; 4
+          2 &nbsp; 9 &nbsp; 11 &nbsp; (O/B)(J-R+F) &nbsp; 19 &nbsp; P-B+D &nbsp;
+          13 &nbsp; 5 &nbsp; 4 &nbsp; 9
         </span>
       </div>
     </div>
