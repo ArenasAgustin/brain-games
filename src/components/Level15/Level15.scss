@@ -271,7 +271,8 @@ $breakpoints:(sm: 350px,
             margin: .3rem;
             position: relative;
 
-            &.level15__guess-item--1 {
+            &.level15__guess-item--1,
+            &.level15__guess-item--9 {
                 border-bottom: #fff solid 2px;
                 border-left: #fff solid 2px;
                 border-top: #fff solid 2px;
@@ -283,26 +284,31 @@ $breakpoints:(sm: 350px,
             }
 
             &.level15__guess-item--3,
-            &.level15__guess-item--6 {
+            &.level15__guess-item--7 {
                 border-bottom: #fff solid 2px;
                 border-right: #fff solid 2px;
             }
 
             &.level15__guess-item--4,
-            &.level15__guess-item--8 {
+            &.level15__guess-item--10 {
                 border-right: #fff solid 2px;
                 border-left: #fff solid 2px;
                 border-top: #fff solid 2px;
                 border-bottom: #fff solid 2px;
             }
 
-            &.level15__guess-item--5 {
+            &.level15__guess-item--5{
+                border-left: #fff solid 2px;
+                border-bottom: #fff solid 2px;
+            }
+
+            &.level15__guess-item--6 {
                 border-right: #fff solid 2px;
                 border-top: #fff solid 2px;
                 border-bottom: #fff solid 2px;
             }
 
-            &.level15__guess-item--7 {
+            &.level15__guess-item--8 {
                 border-bottom: #fff solid 2px;
                 border-left: #fff solid 2px;
                 transform: rotate(-45deg);
@@ -322,7 +328,7 @@ $breakpoints:(sm: 350px,
             }
 
             &.level15__guess-dot--2,
-            &.level15__guess-dot--4 {
+            &.level15__guess-dot--5 {
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
@@ -331,6 +337,12 @@ $breakpoints:(sm: 350px,
             &.level15__guess-dot--3 {
                 top: 50%;
                 right: 20%;
+                transform: translateY(-50%);
+            }
+
+            &.level15__guess-dot--4 {
+                top: 50%;
+                left: 20%;
                 transform: translateY(-50%);
             }
         }
