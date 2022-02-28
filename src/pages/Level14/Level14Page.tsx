@@ -41,7 +41,7 @@ export default function Level14Page() {
   };
 
   const handleNavigate = () => {
-    navigate("/select");
+    navigate("/select/level15");
   };
 
   return (
