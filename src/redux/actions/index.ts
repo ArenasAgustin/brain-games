@@ -39,15 +39,15 @@ export const getScorePointsDB =
     try {
       const resAux = await axios.get(`${REACT_APP_API_URL}`);
 
-      res = resAux.data.sort(
-        (a: ScorePointsInterface, b: ScorePointsInterface) => {
+      res = resAux.data
+        .sort((a: ScorePointsInterface, b: ScorePointsInterface) => {
           if (a.scorePoints > b.scorePoints) return -1;
 
           if (a.scorePoints < b.scorePoints) return 1;
 
           return 0;
-        }
-      );
+        })
+        .slice(0, 10);
     } catch (err) {
       console.log(err);
     }

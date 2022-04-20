@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import ScorePopup from "../../components/ScorePopup/ScorePopup";
 import { ScorePointsInterface } from "../../interfaces/scorePointsInterface";
 import StateInterface from "../../interfaces/stateInterface";
 import { getScorePointsDB } from "../../redux/actions";
@@ -16,6 +17,11 @@ export default function Scores() {
 
   const [scorePointsDB, setScorePointsDB] = useState(scorePointsTable);
   const [sPoints, setSPoints] = useState(scorePoints);
+  const [isOpen, setShowClue] = useState(false);
+
+  const toggleOpenClue = () => {
+    setShowClue((prev) => !prev);
+  };
 
   useEffect(() => {
     setSPoints(scorePoints);
@@ -53,7 +59,7 @@ export default function Scores() {
         <div className="nav__tips-container">
           <span className="nav__score-points">Puntos: {sPoints}</span>
 
-          <button className="nav__button" onClick={() => {}}>
+          <button className="nav__button" onClick={toggleOpenClue}>
             <div className="nav__div-button">
               <p className="nav__button-text">Guardar Puntos</p>
             </div>
@@ -81,6 +87,14 @@ export default function Scores() {
             ))}
           </tbody>
         </table>
+      </div>
+
+      <div>
+        <ScorePopup
+          isOpen={isOpen}
+          toggleOpenClue={toggleOpenClue}
+          points={sPoints}
+        />
       </div>
     </div>
   );
