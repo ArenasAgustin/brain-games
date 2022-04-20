@@ -40,7 +40,7 @@ export default function Level16Page() {
   };
 
   const handleNavigate = () => {
-    navigate("/select");
+    navigate("/scores");
   };
 
   return (
