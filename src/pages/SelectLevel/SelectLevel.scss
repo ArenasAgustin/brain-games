@@ -17,6 +17,19 @@ $breakpoints:(sm: 540px,
         padding: 0.5rem 1rem;
 
         & .select-level__button {
+            color: #ffffff;
+            text-decoration: none;
+
+            &:hover {
+                color: #ffffff;
+                text-decoration: none;
+            }
+
+            &:active {
+                color: #ffffff;
+                text-decoration: none;
+            }
+
             & .select-level__div-button {
                 margin: .5rem;
                 width: 4.5em;

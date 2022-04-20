@@ -27,6 +27,12 @@ export default function NavBar({
             <p className="nav__button-text">Niveles</p>
           </div>
         </NavLink>
+
+        <NavLink className="nav__button" to="/scores">
+          <div className="nav__div-button">
+            <p className="nav__button-text">Puntajes</p>
+          </div>
+        </NavLink>
       </div>
 
       <div className="nav__txt-container">

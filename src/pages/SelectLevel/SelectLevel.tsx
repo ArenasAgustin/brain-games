@@ -25,6 +25,12 @@ export default function SelectLevel() {
             <p className="select-level__button-text">Menu</p>
           </div>
         </NavLink>
+
+        <NavLink className="select-level__button" to="/scores">
+          <div className="select-level__div-button">
+            <p className="select-level__button-text">Puntaje</p>
+          </div>
+        </NavLink>
       </nav>
 
       <div className="select-level__levels">

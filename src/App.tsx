@@ -17,6 +17,7 @@ import Level13 from "./pages/Level13/Level13Page";
 import Level14 from "./pages/Level14/Level14Page";
 import Level15 from "./pages/Level15/Level15Page";
 import Level16 from "./pages/Level16/Level16Page";
+import Scores from "./pages/Scores/Scores";
 
 function App() {
   return (
@@ -57,6 +58,8 @@ function App() {
         <Route path="/select/level15" element={<Level15 />} />
 
         <Route path="/select/level16" element={<Level16 />} />
+
+        <Route path="/scores" element={<Scores />} />
 
         <Route path="*" element={<Home />} />
       </Routes>
