@@ -7,9 +7,19 @@ import {
   GET_SCORE_POINTS,
   SET_SCORE_POINTS,
   GET_SCORE_POINTS_TABLE,
+  RESET_DATA,
 } from "../constants";
 
 const { REACT_APP_API_URL } = process.env;
+const levelsArrFalse: boolean[] = [];
+
+const levelsFunction = () => {
+  for (let i = 0; i < 16; i++) {
+    levelsArrFalse.push(false);
+  }
+};
+
+levelsFunction();
 
 ///////////////////////////////////////////////////////////////////////// LEVELS ARR
 export const getLevelsArr = (): ActionInterface => ({
@@ -57,3 +67,8 @@ export const getScorePointsDB =
       payload: res,
     });
   };
+
+///////////////////////////////////////////////////////////////////////// RESET DATA
+export const resetData = (): ActionInterface => ({
+  type: RESET_DATA,
+});

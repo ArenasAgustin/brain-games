@@ -4,25 +4,37 @@ import {
   GET_LEVELS_ARR,
   GET_SCORE_POINTS,
   GET_SCORE_POINTS_TABLE,
+  RESET_DATA,
   SET_LEVELS_ARR,
   SET_SCORE_POINTS,
 } from "../constants";
 
-const levelsArr: boolean[] = [];
+const levelsArrFalse: boolean[] = [];
+const localStorage = window.localStorage;
 
 const levelsFunction = () => {
   for (let i = 0; i < 16; i++) {
-    levelsArr.push(false);
+    levelsArrFalse.push(false);
   }
 };
 
 levelsFunction();
 
-const initialState = {
-  levelsArr: levelsArr,
+let initialState = {
+  levelsArr: levelsArrFalse,
   scorePoints: 0,
   scorePointsTable: [],
 };
+
+const setAndGetLocalStorage = () => {
+  let levelsArr = localStorage.getItem("levelsArr");
+  if (levelsArr) initialState.levelsArr = JSON.parse(levelsArr);
+
+  let scorePoints = localStorage.getItem("scorePoints");
+  if (scorePoints) initialState.scorePoints = JSON.parse(scorePoints);
+};
+
+setAndGetLocalStorage();
 
 const reducer = (
   state: StateInterface = initialState,
@@ -36,6 +48,8 @@ const reducer = (
       };
 
     case SET_LEVELS_ARR:
+      localStorage.setItem("levelsArr", JSON.stringify(payload));
+
       return {
         ...state,
         levelsArr: payload,
@@ -48,6 +62,8 @@ const reducer = (
       };
 
     case SET_SCORE_POINTS:
+      localStorage.setItem("scorePoints", JSON.stringify(payload));
+
       return {
         ...state,
         scorePoints: state.scorePoints + payload,
@@ -57,6 +73,17 @@ const reducer = (
       return {
         ...state,
         scorePointsTable: payload,
+      };
+
+    ///////////////////////////////////////////////////////////////////////// RESET DATA
+    case RESET_DATA:
+      localStorage.setItem("levelsArr", JSON.stringify(levelsArrFalse));
+      localStorage.setItem("scorePoints", JSON.stringify(0));
+
+      return {
+        ...state,
+        levelsArr: levelsArrFalse,
+        scorePoints: 0,
       };
 
     default:

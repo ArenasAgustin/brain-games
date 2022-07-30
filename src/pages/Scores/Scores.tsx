@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import Loading from "../../components/Loading/Loading";
 import ScorePopup from "../../components/ScorePopup/ScorePopup";
 import { ScorePointsInterface } from "../../interfaces/scorePointsInterface";
 import StateInterface from "../../interfaces/stateInterface";
@@ -20,7 +21,7 @@ export default function Scores() {
   const [isOpen, setShowClue] = useState(false);
 
   const toggleOpenClue = () => {
-    setShowClue((prev) => !prev);
+    if (sPoints) setShowClue((prev) => !prev);
   };
 
   useEffect(() => {
@@ -78,13 +79,19 @@ export default function Scores() {
           </thead>
 
           <tbody>
-            {scorePointsDB.map((scorePointDB: ScorePointsInterface) => (
-              <tr key={scorePointDB._id}>
-                <td>{scorePointDB.name}</td>
+            {scorePointsDB.length > 0 ? (
+              scorePointsDB.map((scorePointDB: ScorePointsInterface) => (
+                <tr key={scorePointDB._id}>
+                  <td>{scorePointDB.name}</td>
 
-                <td>{scorePointDB.scorePoints}</td>
+                  <td>{scorePointDB.scorePoints}</td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <Loading />
               </tr>
-            ))}
+            )}
           </tbody>
         </table>
       </div>

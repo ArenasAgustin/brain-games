@@ -9,3 +9,6 @@ export const SET_SCORE_POINTS = "SET_SCORE_POINTS";
 export const GET_SCORE_POINTS = "GET_SCORE_POINTS";
 
 export const GET_SCORE_POINTS_TABLE = "GET_SCORE_POINTS_TABLE";
+
+///////////////////////////////////////////////////////////////////////// RESET DATA
+export const RESET_DATA = "RESET_DATA";

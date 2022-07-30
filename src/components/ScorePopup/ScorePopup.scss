@@ -96,6 +96,21 @@ $breakpoints:(sm: 350px,
                 @include media-up(md) {
                     font-size: 1.2em;
                 }
+
+                &.red {
+                    margin-top: 1rem;
+                    color: #ff343f;
+                    font-size: .4em;
+
+                    @include media-up(sm) {
+                        font-size: .6em;
+                        margin-bottom: .5em;
+                    }
+
+                    @include media-up(md) {
+                        font-size: .8em;
+                    }
+                }
             }
 
             & .score__input {

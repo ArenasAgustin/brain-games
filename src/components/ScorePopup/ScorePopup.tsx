@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 import { useDispatch } from "react-redux";
-import { getScorePointsDB } from "../../redux/actions";
+import { getScorePointsDB, resetData } from "../../redux/actions";
 import "./ScorePopup.scss";
 
 const { REACT_APP_API_URL } = process.env;
@@ -33,6 +33,7 @@ export default function ScorePopup({
     });
 
     dispatch(getScorePointsDB());
+    dispatch(resetData());
     toggleOpenClue();
   };
 
@@ -71,6 +72,10 @@ export default function ScorePopup({
                   <p className="nav__button-text">Guardar</p>
                 </div>
               </button>
+
+              <label className="score__label red">
+                Al guardar se resetean los datos locales para volver a empezar
+              </label>
             </form>
           </div>
 
