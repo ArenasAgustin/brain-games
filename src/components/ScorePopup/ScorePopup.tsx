@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
+import { useDispatch } from "react-redux";
+import { getScorePointsDB } from "../../redux/actions";
 import "./ScorePopup.scss";
 
 const { REACT_APP_API_URL } = process.env;
@@ -15,6 +17,7 @@ export default function ScorePopup({
   points: number;
 }) {
   const [name, setName] = useState("");
+  const dispatch = useDispatch();
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
@@ -23,11 +26,13 @@ export default function ScorePopup({
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     const res = await axios.post(REACT_APP_API_URL ? REACT_APP_API_URL : "", {
       name,
       scorePoints: points,
     });
-    console.log(res);
+
+    dispatch(getScorePointsDB());
     toggleOpenClue();
   };
 
