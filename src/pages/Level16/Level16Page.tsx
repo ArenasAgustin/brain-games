@@ -2,15 +2,12 @@ import { useState } from "react";
 import Level16 from "../../components/Level16/Level16";
 import NavBar from "../../components/NavBar/NavBar";
 import TipPopup from "../../components/TipPopup/TipPopup";
-import data from "../../data/data.json";
 import { useAppDispatch } from "../../redux/hooks/hooks";
 import { setScorePoints } from "../../redux/actions";
 import { useNavigate } from "react-router-dom";
 import CompletedPopup from "../../components/CompletedPopUp/CompletedPopup";
 
 export default function Level16Page() {
-  const objData = JSON.parse(JSON.stringify(data));
-
   const [isCompleted, setIsCompleted] = useState(false);
   const [isCompletedOneTime, setIsCompletedOneTime] = useState(false);
   const [isOpen, setShowClue] = useState(false);
