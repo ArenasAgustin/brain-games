@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
-import data from "../../data/data.json";
 import "./ScorePopup.scss";
 
 const { REACT_APP_API_URL } = process.env;
