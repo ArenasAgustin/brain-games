@@ -8,7 +8,7 @@ import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter basename="brain-games">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </Provider>,
