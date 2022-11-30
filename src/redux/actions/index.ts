@@ -8,6 +8,7 @@ import {
   SET_SCORE_POINTS,
   GET_SCORE_POINTS_TABLE,
   RESET_DATA,
+  SET_SECRET_LEVEL,
 } from "../constants";
 
 const { REACT_APP_API_URL } = process.env;
@@ -71,4 +72,10 @@ export const getScorePointsDB =
 ///////////////////////////////////////////////////////////////////////// RESET DATA
 export const resetData = (): ActionInterface => ({
   type: RESET_DATA,
+});
+
+///////////////////////////////////////////////////////////////////////// SECRET LEVEL
+export const setSecretLevel = (payload: boolean): ActionInterface => ({
+  type: SET_SECRET_LEVEL,
+  payload,
 });

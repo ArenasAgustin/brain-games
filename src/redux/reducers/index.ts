@@ -7,6 +7,7 @@ import {
   RESET_DATA,
   SET_LEVELS_ARR,
   SET_SCORE_POINTS,
+  SET_SECRET_LEVEL,
 } from "../constants";
 
 const levelsArrFalse: boolean[] = [];
@@ -24,6 +25,7 @@ let initialState = {
   levelsArr: levelsArrFalse,
   scorePoints: 0,
   scorePointsTable: [],
+  secretLevel: false,
 };
 
 const setAndGetLocalStorage = () => {
@@ -84,6 +86,13 @@ const reducer = (
         ...state,
         levelsArr: levelsArrFalse,
         scorePoints: 0,
+      };
+
+    ///////////////////////////////////////////////////////////////////////// SECRET LEVEL
+    case SET_SECRET_LEVEL:
+      return {
+        ...state,
+        secretLevel: payload,
       };
 
     default:

@@ -1,0 +1,90 @@
+$breakpoints:(sm: 540px,
+    md: 768px,
+    xl: 1200px,
+);
+
+@mixin media-up($breakpoint) {
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
+.secret__container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & .secret__title-div {
+        & .secret__title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 1rem;
+
+            @include media-up(md) {
+                font-size: 2.5rem;
+            }
+
+            & .secret__title-brain {
+                background-color: #fff;
+                color: #000213;
+                padding: .1rem .3rem;
+            }
+
+            & .secret__title-es {
+                font-size: 14px;
+            }
+        }
+    }
+
+    & .secret__nav {
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+        padding: 0.5rem 1rem;
+
+        & .secret__button {
+            color: #ffffff;
+            text-decoration: none;
+
+            &:hover {
+                color: #ffffff;
+                text-decoration: none;
+            }
+
+            &:active {
+                color: #ffffff;
+                text-decoration: none;
+            }
+
+            & .secret__div-button {
+                margin: .5rem;
+                width: 4.5em;
+                border: #ffffff solid 3px;
+
+                @include media-up(md) {
+                    width: 5em;
+                }
+
+                & .secret__button-text {
+                    font-size: 16px;
+                    font-weight: 700;
+                    margin: .2em 0;
+                    color: #ffffff;
+                    text-decoration: none;
+
+                    @include media-up(md) {
+                        margin: .5rem;
+                    }
+                }
+            }
+        }
+    }
+}

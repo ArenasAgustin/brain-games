@@ -5,6 +5,7 @@ import ButtonLevel from "../../components/ButtonLevel/ButtonLevel";
 import StateInterface from "../../interfaces/stateInterface";
 import data from "../../data/data.json";
 import "./SelectLevel.scss";
+import SecretInput from "../../components/SecretInput/SecretInput";
 
 export default function SelectLevel() {
   const objData = JSON.parse(JSON.stringify(data));
@@ -12,6 +13,7 @@ export default function SelectLevel() {
   const levelsArr = useSelector((state: StateInterface) => state.levelsArr);
 
   const [levels, setLevels] = useState(levelsArr);
+  const [secretLevel, setSecretLevel] = useState(false);
 
   useEffect(() => {
     setLevels(levelsArr);
@@ -37,7 +39,11 @@ export default function SelectLevel() {
         {objData.levels.map((level: any, index: any) => (
           <ButtonLevel level={level} key={level} isCompleted={levels[index]} />
         ))}
+
+        {secretLevel && <ButtonLevel isSecret={true} />}
       </div>
+
+      <SecretInput secretLevel={secretLevel} setSecretLevel={setSecretLevel} />
     </div>
   );
 }
