@@ -43,6 +43,11 @@ export default function EasterEgg() {
         rotationSpeed={[-0.5, 0.5]}
         images={[snowflake]}
       />
+
+      <audio autoPlay loop>
+        <source src="/easterEgg.mp3" type="audio/mpeg" />
+        <source src="/easterEgg.ogv" type="audio/ogg" />
+      </audio>
     </div>
   );
 }
