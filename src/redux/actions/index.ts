@@ -45,7 +45,7 @@ export const getScorePoints = (): ActionInterface => ({
 export const getScorePointsDB =
   () =>
   async (dispatch: any): Promise<void> => {
-    let res: ScorePointsInterface | [] = [];
+    let res: ScorePointsInterface | string | [] = [];
 
     try {
       const resAux = await axios.get(`${REACT_APP_API_URL}`);
@@ -61,6 +61,8 @@ export const getScorePointsDB =
         .slice(0, 10);
     } catch (err) {
       console.log(err);
+
+      res = "error";
     }
 
     dispatch({

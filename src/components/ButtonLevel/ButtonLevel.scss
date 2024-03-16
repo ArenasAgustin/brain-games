@@ -1,46 +1,47 @@
-$breakpoints:(sm: 540px,
-    md: 768px,
-    xl: 1200px,
+$breakpoints: (
+  sm: 540px,
+  md: 768px,
+  xl: 1200px,
 );
 
 @mixin media-up($breakpoint) {
-    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
-        @content;
-    }
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
 }
 
 .button-level__button {
-    text-decoration: none;
+  text-decoration: none;
 
-    & .button-level {
-        margin: .5rem;
-        width: 4.8em;
-        border: #ffffff solid 3px;
+  & .button-level {
+    margin: 0.5rem;
+    // width: 4.8em;
+    border: #ffffff solid 3px;
 
-        @include media-up(md) {
-            margin: .8rem;
-            width: 6em;
-        }
-
-        & .button-level__text {
-            font-size: 16px;
-            font-weight: 700;
-            margin: .3rem;
-            color: #ffffff;
-
-            @include media-up(md) {
-                font-size: 20px;
-                margin: .5rem;
-            }
-        }
-
-        &.completed {
-            border: #00b8f0 solid 3px;
-            color: #00b8f0;
-
-            & .button-level__text {
-                color: #00b8f0;
-            }
-        }
+    @include media-up(md) {
+      margin: 0.8rem;
+      // width: 6em;
     }
+
+    & .button-level__text {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0.3rem;
+      color: #ffffff;
+
+      @include media-up(md) {
+        font-size: 20px;
+        margin: 0.5rem;
+      }
+    }
+
+    &.completed {
+      border: #00b8f0 solid 3px;
+      color: #00b8f0;
+
+      & .button-level__text {
+        color: #00b8f0;
+      }
+    }
+  }
 }

@@ -1,123 +1,124 @@
-$breakpoints:(sm: 540px,
-    md: 768px,
-    xl: 1200px,
+$breakpoints: (
+  sm: 540px,
+  md: 768px,
+  xl: 1200px,
 );
 
 @mixin media-up($breakpoint) {
-    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
-        @content;
-    }
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
 }
 
 .nav__container {
-    position: relative;
-    padding: .5rem 1rem;
-    width: calc(100% - 2rem);
-    height: 5rem;
+  position: relative;
+  padding: 0.5rem 1rem;
+  width: calc(100% - 2rem);
+  height: 5rem;
 
-    & .nav__links-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: absolute;
-        top: 50%;
-        left: 1rem;
-        transform: translateY(-50%);
+  & .nav__links-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+  }
+
+  & .nav__tips-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+  }
+
+  & .nav__button {
+    text-decoration: none;
+    margin: 0.2rem;
+    cursor: pointer;
+    border: none;
+
+    @include media-up(md) {
+      margin: 0.5rem;
     }
 
-    & .nav__tips-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: absolute;
-        top: 50%;
-        right: 1rem;
-        transform: translateY(-50%);
-    }
+    & .nav__div-button {
+      //width: 4.5rem;
+      height: 2rem;
+      border: #ffffff solid 3px;
+      background-color: #000213;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-    & .nav__button {
-        text-decoration: none;
-        margin: .2rem;
-        cursor: pointer;
-        border: none;
+      @include media-up(md) {
+        height: 2.5rem;
+        //width: 5rem;
+      }
 
-        @include media-up(md) {
-            margin: .5rem;
-        }
-
-        & .nav__div-button {
-            width: 4.5rem;
-            height: 2rem;
-            border: #ffffff solid 3px;
-            background-color: #000213;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            @include media-up(md) {
-                height: 2.5rem;
-                width: 5rem;
-            }
-
-            & .nav__button-text {
-                font-size: 13px;
-                font-weight: 700;
-                margin: .1rem 0;
-                color: #ffffff;
-
-                @include media-up(md) {
-                    font-size: 16px;
-                    margin: .5rem;
-                }
-            }
-        }
-    }
-
-    & .nav__txt-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        @include media-up(md) {
-            flex-direction: row;
-        }
-
-        & .nav__score {
-            @include media-up(md) {
-                display: none;
-            }
-        }
-    }
-
-    & .nav__tips-container {
-        position: absolute;
-        top: 50%;
-        right: .5rem;
-        transform: translateY(-50%);
-
-        & .nav__score-points {
-            display: none;
-
-            @include media-up(md) {
-                display: initial;
-            }
-        }
-    }
-
-    & .nav__score-points,
-    & .nav__level {
-        font-size: 14px;
+      & .nav__button-text {
+        font-size: 13px;
         font-weight: 700;
-        margin: .2rem;
+        margin: 0.1rem 0;
+        color: #ffffff;
 
         @include media-up(md) {
-            font-size: 20px;
-            margin: .5rem;
+          font-size: 16px;
+          margin: 0.5rem;
         }
+      }
     }
+  }
+
+  & .nav__txt-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include media-up(md) {
+      flex-direction: row;
+    }
+
+    & .nav__score {
+      @include media-up(md) {
+        display: none;
+      }
+    }
+  }
+
+  & .nav__tips-container {
+    position: absolute;
+    top: 50%;
+    right: 0.5rem;
+    transform: translateY(-50%);
+
+    & .nav__score-points {
+      display: none;
+
+      @include media-up(md) {
+        display: initial;
+      }
+    }
+  }
+
+  & .nav__score-points,
+  & .nav__level {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0.2rem;
+
+    @include media-up(md) {
+      font-size: 20px;
+      margin: 0.5rem;
+    }
+  }
 }

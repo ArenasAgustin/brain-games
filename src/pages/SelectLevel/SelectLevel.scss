@@ -1,69 +1,70 @@
-$breakpoints:(sm: 540px,
-    md: 768px,
-    xl: 1200px,
+$breakpoints: (
+  sm: 540px,
+  md: 768px,
+  xl: 1200px,
 );
 
 @mixin media-up($breakpoint) {
-    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
-        @content;
-    }
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
 }
 
 .select-level__container {
-    & .select-level__nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.5rem 1rem;
+  & .select-level__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
 
-        & .select-level__button {
-            color: #ffffff;
-            text-decoration: none;
+    & .select-level__button {
+      color: #ffffff;
+      text-decoration: none;
 
-            &:hover {
-                color: #ffffff;
-                text-decoration: none;
-            }
+      &:hover {
+        color: #ffffff;
+        text-decoration: none;
+      }
 
-            &:active {
-                color: #ffffff;
-                text-decoration: none;
-            }
+      &:active {
+        color: #ffffff;
+        text-decoration: none;
+      }
 
-            & .select-level__div-button {
-                margin: .5rem;
-                width: 4.5em;
-                border: #ffffff solid 3px;
-
-                @include media-up(md) {
-                    width: 5em;
-                }
-
-                & .select-level__button-text {
-                    font-size: 16px;
-                    font-weight: 700;
-                    margin: .2em 0;
-                    color: #ffffff;
-                    text-decoration: none;
-
-                    @include media-up(md) {
-                        margin: .5rem;
-                    }
-                }
-            }
-        }
-    }
-
-    & .select-level__levels {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        padding: 0 .8rem;
+      & .select-level__div-button {
+        margin: 0.5rem;
+        //width: 4.5em;
+        border: #ffffff solid 3px;
 
         @include media-up(md) {
-            padding: 0 1.5rem;
+          //width: 5em;
         }
+
+        & .select-level__button-text {
+          font-size: 16px;
+          font-weight: 700;
+          margin: 0.2em 0;
+          color: #ffffff;
+          text-decoration: none;
+
+          @include media-up(md) {
+            margin: 0.5rem;
+          }
+        }
+      }
     }
+  }
+
+  & .select-level__levels {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 0.8rem;
+
+    @include media-up(md) {
+      padding: 0 1.5rem;
+    }
+  }
 }

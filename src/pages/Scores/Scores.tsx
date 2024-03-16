@@ -79,7 +79,13 @@ export default function Scores() {
           </thead>
 
           <tbody>
-            {scorePointsDB.length > 0 ? (
+            {!Array.isArray(scorePointsDB) && (
+              <tr>
+                <h3>No es posible cargar los datos por el momento</h3>
+              </tr>
+            )}
+
+            {scorePointsDB.length > 0 && Array.isArray(scorePointsDB) ? (
               scorePointsDB.map((scorePointDB: ScorePointsInterface) => (
                 <tr key={scorePointDB._id}>
                   <td>{scorePointDB.name}</td>
@@ -88,9 +94,7 @@ export default function Scores() {
                 </tr>
               ))
             ) : (
-              <tr>
-                <Loading />
-              </tr>
+              <tr>{Array.isArray(scorePointsDB) && <Loading />}</tr>
             )}
           </tbody>
         </table>
