@@ -40,7 +40,7 @@ export default function Level4() {
           <p className="level4__letter">E</p>
           <img
             className="level4__clue"
-            alt="Emoji beaming face with smiling eye"
+            alt="Emoji beaming face with smiling eyes"
             src="https://res.cloudinary.com/df7zuvuxu/image/upload/v1710558357/beaming-face-with-smiling-eyes_1f601_lghvon.png"
           />
         </div>
@@ -226,7 +226,7 @@ export default function Level4() {
           />
           <img
             alt="Emoji beaming face with smiling eyes"
-            src="https://res.cloudinary.com/df7zuvuxu/image/upload/v1710559480/confused-face_1f615_zcb2oa.png"
+            src="https://res.cloudinary.com/df7zuvuxu/image/upload/v1710558357/beaming-face-with-smiling-eyes_1f601_lghvon.png"
           />
           <img
             alt="Emoji hushed face"
