@@ -27,7 +27,7 @@ export default function ScorePopup({
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const res = await axios.post(REACT_APP_API_URL ? REACT_APP_API_URL : "", {
+    await axios.post(REACT_APP_API_URL ? REACT_APP_API_URL : "", {
       name,
       scorePoints: points,
     });

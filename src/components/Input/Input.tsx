@@ -51,10 +51,10 @@ export default function Input({
   };
 
   useEffect(() => {
-    setStateLocal({
-      ...stateLocal,
+    setStateLocal((prevState) => ({
+      ...prevState,
       auxLevelsArr: levelsArr,
-    });
+    }));
   }, [levelsArr]);
 
   return (

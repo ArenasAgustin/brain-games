@@ -1,4 +1,4 @@
-import { KeyboardEvent, useEffect, useState } from "react";
+import { KeyboardEvent, useEffect } from "react";
 
 export default function SecretInput({
   secretLevel,
@@ -7,7 +7,7 @@ export default function SecretInput({
   secretLevel: boolean;
   setSecretLevel: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
-  const [keys, setKeys] = useState([
+  const keys = [
     "ArrowUp",
     "ArrowUp",
     "ArrowDown",
@@ -18,7 +18,7 @@ export default function SecretInput({
     "ArrowRight",
     "b",
     "a",
-  ]);
+  ];
 
   const handleKeyboardEvent = (): any => {
     let countKeys = 0;
@@ -48,6 +48,7 @@ export default function SecretInput({
     if (typeof window !== "undefined") {
       document.addEventListener("keydown", handleKeyboardEvent(), false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return <div></div>;

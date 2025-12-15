@@ -43,6 +43,7 @@ export default function Level16({
 
   useEffect(() => {
     handleSubmit();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [solution]);
 
   return (
