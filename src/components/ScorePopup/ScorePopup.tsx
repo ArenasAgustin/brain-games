@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
-import { useDispatch } from "react-redux";
 import { getScorePointsDB, resetData } from "../../redux/actions";
+import { useAppDispatch } from "../../redux/hooks/hooks";
 import "./ScorePopup.scss";
 
 const { REACT_APP_API_URL } = process.env;
@@ -17,7 +17,7 @@ export default function ScorePopup({
   points: number;
 }) {
   const [name, setName] = useState("");
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;

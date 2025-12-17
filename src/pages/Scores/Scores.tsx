@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import Loading from "../../components/Loading/Loading";
 import ScorePopup from "../../components/ScorePopup/ScorePopup";
 import { ScorePointsInterface } from "../../interfaces/scorePointsInterface";
 import StateInterface from "../../interfaces/stateInterface";
 import { getScorePointsDB } from "../../redux/actions";
+import { useAppDispatch } from "../../redux/hooks/hooks";
 import "./Scores.scss";
 
 export default function Scores() {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const scorePointsTable = useSelector(
     (state: StateInterface) => state.scorePointsTable
